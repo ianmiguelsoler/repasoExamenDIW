@@ -1,0 +1,84 @@
+/* Estilo base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+body {
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Cabecera principal */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Contenedor principal */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de cada etiqueta */
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #4a90e2;
+    background-color: #f7faff;
+    border-radius: 4px;
+}
+
+section h2 {
+    color: #4a90e2;
+    margin-bottom: 8px;
+    font-size: 1.6em;
+}
+
+section p {
+    margin-bottom: 8px;
+}
+
+/* Ejemplos de código */
+pre {
+    background-color: #eaeff5;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9em;
+    color: #333;
+    overflow-x: auto;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+footer p {
+    font-size: 1em;
+}
