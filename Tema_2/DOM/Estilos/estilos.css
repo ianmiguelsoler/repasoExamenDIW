@@ -1,0 +1,117 @@
+/* Estilo base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+body {
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Cabecera principal */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Contenedor principal */
+main {
+    display: flex;
+    gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cada columna */
+.columna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sección de cada etiqueta */
+section {
+    padding: 15px;
+    border-left: 4px solid #4a90e2;
+    background-color: #f7faff;
+    border-radius: 4px;
+}
+
+section h2 {
+    color: #4a90e2;
+    margin-bottom: 8px;
+    font-size: 1.6em;
+}
+
+section p {
+    margin-bottom: 8px;
+}
+
+/* Botones de acción */
+button {
+    padding: 8px 16px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ab8;
+}
+
+/* Resultados de búsqueda */
+#resultado-busqueda {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #eaeff5;
+    border-radius: 4px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9em;
+    color: #333;
+    overflow-x: auto;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Ajustes de responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}

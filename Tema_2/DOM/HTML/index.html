@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación del DOM</title>
+    <link rel="stylesheet" href="../Estilos/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Práctica de Manipulación del DOM</h1>
+        <p>Aprendiendo a trabajar con el Document Object Model (DOM) en JavaScript.</p>
+    </header>
+
+    <main>
+        <div class="columna">
+            <section id="busqueda-elementos">
+                <h2>Búsqueda de elementos</h2>
+                <button onclick="buscarPorId()">Buscar por ID</button>
+                <button onclick="buscarPorClase()">Buscar por Clase</button>
+                <button onclick="buscarPorEtiqueta()">Buscar por Etiqueta</button>
+                <button onclick="buscarPorSelector()">Buscar por Selector CSS</button>
+                <div id="resultado-busqueda"></div>
+            </section>
+
+            <section id="manipulacion-clases">
+                <h2>Manipulación de clases</h2>
+                <div id="elemento-manipular" class="caja">Elemento para manipular clases</div>
+                <button onclick="alternarClase()">Alternar Clase</button>
+                <button onclick="añadirClase()">Añadir Clase</button>
+                <button onclick="eliminarClase()">Eliminar Clase</button>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Ian Miguel Soler</p>
+    </footer>
+
+    <script src="../JavaScript/funciones.js"></script>
+</body>
+</html>
