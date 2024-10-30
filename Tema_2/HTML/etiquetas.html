@@ -15,189 +15,107 @@
     </header>
 
     <main>
-        <section>
-            <h2>&lt;header&gt;</h2>
-            <p>Define una cabecera para un documento o sección, incluyendo logotipos o menús.</p>
-            <pre>&lt;header&gt;Contenido de cabecera&lt;/header&gt;</pre>
-        </section>
+        <!-- Primera columna -->
+        <div class="columna">
+            <section>
+                <h2>&lt;header&gt;</h2>
+                <p>Define una cabecera para un documento o sección, incluyendo logotipos o menús.</p>
+                <pre>&lt;header&gt;Contenido de cabecera&lt;/header&gt;</pre>
+            </section>
 
-        <section>
-            <h2>&lt;nav&gt;</h2>
-            <p>Representa una sección de navegación con enlaces.</p>
-            <pre>&lt;nav&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/nav&gt;</pre>
-        </section>
+            <section>
+                <h2>&lt;nav&gt;</h2>
+                <p>Representa una sección de navegación con enlaces.</p>
+                <pre>&lt;nav&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/nav&gt;</pre>
+            </section>
 
-        <section>
-            <h2>&lt;section&gt;</h2>
-            <p>Define una sección de contenido temático.</p>
-            <pre>&lt;section&gt;Contenido de la sección&lt;/section&gt;</pre>
-        </section>
+            <section>
+                <h2>&lt;section&gt;</h2>
+                <p>Define una sección de contenido temático.</p>
+                <pre>&lt;section&gt;Contenido de la sección&lt;/section&gt;</pre>
+            </section>
+        </div>
 
-        <section>
-            <h2>&lt;aside&gt;</h2>
-            <p>Elemento para contenido relacionado, como barras laterales.</p>
-            <pre>&lt;aside&gt;Contenido adicional&lt;/aside&gt;</pre>
-        </section>
+        <!-- Segunda columna -->
+        <div class="columna">
+            <section>
+                <h2>&lt;aside&gt;</h2>
+                <p>Elemento para contenido relacionado, como barras laterales.</p>
+                <pre>&lt;aside&gt;Contenido adicional&lt;/aside&gt;</pre>
+            </section>
 
-        <section>
-            <h2>&lt;footer&gt;</h2>
-            <p>Define el pie de página del documento o sección.</p>
-            <pre>&lt;footer&gt;Información del pie&lt;/footer&gt;</pre>
-        </section>
+            <section>
+                <h2>&lt;footer&gt;</h2>
+                <p>Define el pie de página del documento o sección.</p>
+                <pre>&lt;footer&gt;Información del pie&lt;/footer&gt;</pre>
+            </section>
 
-        <section>
-            <h2>&lt;article&gt;</h2>
-            <p>Representa contenido independiente como un artículo de blog.</p>
-            <pre>&lt;article&gt;Contenido del artículo&lt;/article&gt;</pre>
-        </section>
+            <section>
+                <h2>&lt;article&gt;</h2>
+                <p>Representa contenido independiente como un artículo de blog.</p>
+                <pre>&lt;article&gt;Contenido del artículo&lt;/article&gt;</pre>
+            </section>
+        </div>
 
-        <section>
-            <h2>&lt;figure&gt; y &lt;figcaption&gt;</h2>
-            <p>Contenedor para contenido ilustrativo, con una leyenda descriptiva.</p>
-            <pre>
+        <!-- Tercera columna -->
+        <div class="columna">
+            <section>
+                <h2>&lt;figure&gt; y &lt;figcaption&gt;</h2>
+                <p>Contenedor para contenido ilustrativo, con una leyenda descriptiva.</p>
+                <pre>
 &lt;figure&gt;
     &lt;img src="imagen.jpg" alt="Descripción"&gt;
     &lt;figcaption&gt;Leyenda de la imagen&lt;/figcaption&gt;
 &lt;/figure&gt;
-            </pre>
-        </section>
+                </pre>
+            </section>
 
-        <section>
-            <h2>&lt;address&gt;</h2>
-            <p>Elemento para información de contacto.</p>
-            <pre>&lt;address&gt;Dirección de contacto&lt;/address&gt;</pre>
-        </section>
+            <section>
+                <h2>&lt;address&gt;</h2>
+                <p>Elemento para información de contacto.</p>
+                <pre>&lt;address&gt;Dirección de contacto&lt;/address&gt;</pre>
+            </section>
 
-        <section>
-            <h2>&lt;bdi&gt;</h2>
-            <p>La etiqueta <code>&lt;bdi&gt;</code> (Bidirectional Isolation) permite aislar un fragmento de texto que puede tener una direccionalidad diferente o desconocida.</p>
-            <pre>
-                &lt;p&gt;Usuario: &lt;bdi&gt;إيان&lt;/bdi&gt; &lt;/p&gt;
-            </pre>
-            <p>Resultado:</p>
-            <p>Usuario: <bdi>إيان</bdi></p>
-        </section>
+        </div>
 
-        <section>
-            <h2>&lt;cite&gt;</h2>
-            <p>La etiqueta <code>&lt;cite&gt;</code> se utiliza para citar el título de una obra, como un libro, película, o una obra de arte.</p>
-            <pre>
-                &lt;p&gt;Me encanta &lt;cite&gt;Don Quijote de la Mancha&lt;/cite&gt; de Cervantes.&lt;/p&gt;
-            </pre>
-            <p>Resultado:</p>
-            <p>Me encanta <cite>Don Quijote de la Mancha</cite> de Cervantes.</p>
-        </section>
+        <!-- Nueva fila para audio y video -->
+        <div class="columna" style="flex-basis: 100%; margin-top: 20px;">
+            <section>
+                <h2>&lt;audio&gt;</h2>
+                <p>La etiqueta <code>&lt;audio&gt;</code> se usa para insertar archivos de audio en el documento. Permite controles para reproducir, pausar y ajustar el volumen.</p>
+                <pre>
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Tu navegador no soporta el elemento de audio.
+&lt;/audio&gt;
+                </pre>
+                <p>Resultado:</p>
+                <audio controls>
+                    <source src="audio.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </section>
 
-        <section>
-            <h2>&lt;datalist&gt;</h2>
-            <p>Elemento para listas de autocompletado en inputs.</p>
-            <pre>
-&lt;input list="navegadores"&gt;
-&lt;datalist id="navegadores"&gt;
-    &lt;option value="Chrome"&gt;
-    &lt;option value="Firefox"&gt;
-&lt;/datalist&gt;
-            </pre>
-        </section>
-
-        <section>
-            <h2>&lt;details&gt; y &lt;summary&gt;</h2>
-            <p>Permiten mostrar u ocultar detalles adicionales al hacer clic.</p>
-            <pre>
-&lt;details&gt;
-    &lt;summary&gt;Mostrar más&lt;/summary&gt;
-    Texto adicional visible al pulsar.
-&lt;/details&gt;
-            </pre>
-        </section>
-
-        <section>
-            <h2>&lt;embed&gt;</h2>
-            <p>La etiqueta <code>&lt;embed&gt;</code> se usa para integrar contenido externo, como un vídeo o archivo de audio, en el documento.</p>
-            <pre>
-                &lt;embed src="sample-video.mp4" width="400" height="300"&gt;
-            </pre>
-        </section>
-
-        <section>
-            <h2>&lt;main&gt;</h2>
-            <p>Elemento que contiene el contenido principal del documento.</p>
-            <pre>&lt;main&gt;Contenido principal&lt;/main&gt;</pre>
-        </section>
-
-        <section>
-            <h2>&lt;mark&gt;</h2>
-            <p>Resalta texto importante en un contexto específico.</p>
-            <pre>&lt;mark&gt;Texto resaltado&lt;/mark&gt;</pre>
-        </section>
-
-        <section>
-            <h2>&lt;meter&gt;</h2>
-            <p>Elemento para representar una medida en una escala acotada.</p>
-            <pre>&lt;meter value="0.7"&gt;70%&lt;/meter&gt;</pre>
-        </section>
-
-        <section>
-            <h2>&lt;output&gt;</h2>
-            <p>Define el resultado de un cálculo.</p>
-            <pre>
-&lt;form oninput="resultado.value=parseInt(a.value)+parseInt(b.value)"&gt;
-    &lt;input name="a" type="number"&gt; + &lt;input name="b" type="number"&gt;
-    = &lt;output name="resultado"&gt;&lt;/output&gt;
-&lt;/form&gt;
-            </pre>
-        </section>
-
-        <section>
-            <h2>&lt;progress&gt;</h2>
-            <p>Representa el progreso de una tarea en proceso.</p>
-            <pre>&lt;progress value="70" max="100"&gt;70%&lt;/progress&gt;</pre>
-        </section>
-
-        <section>
-            <h2>&lt;ruby&gt;, &lt;rp&gt;, y &lt;rt&gt;</h2>
-            <p>La etiqueta <code>&lt;ruby&gt;</code> se usa para anotaciones en textos de idiomas ideográficos (como japonés o chino). El texto de la anotación se coloca dentro de <code>&lt;rt&gt;</code>, y <code>&lt;rp&gt;</code> ofrece soporte para navegadores que no muestran la anotación.</p>
-            <pre>
-                &lt;ruby&gt;
-                    漢 &lt;rt&gt;kan&lt;/rt&gt;
-                    字 &lt;rt&gt;ji&lt;/rt&gt;
-                &lt;/ruby&gt;
-            </pre>
-            <p>Resultado:</p>
-            <ruby>
-                漢 <rt>kan</rt> 字 <rt>ji</rt>
-            </ruby>
-        </section>
-
-        <section>
-            <h2>&lt;small&gt;</h2>
-            <p>La etiqueta <code>&lt;small&gt;</code> se utiliza para mostrar texto que es menos importante, como notas legales o aclaraciones.</p>
-            <pre>
-                &lt;p&gt;Derechos reservados &lt;small&gt;&copy; 2024&lt;/small&gt;&lt;/p&gt;
-            </pre>
-            <p>Resultado:</p>
-            <p>Derechos reservados <small>&copy; 2024</small></p>
-        </section>
-
-        <section>
-            <h2>&lt;time&gt;</h2>
-            <p>Representa una fecha o una hora en formato legible.</p>
-            <pre>&lt;time datetime="2024-10-30"&gt;30 de octubre de 2024&lt;/time&gt;</pre>
-        </section>
-
-        <section>
-            <h2>&lt;wbr&gt;</h2>
-            <p>La etiqueta <code>&lt;wbr&gt;</code> (Word Break Opportunity) permite definir un posible punto de salto de línea en una palabra larga.</p>
-            <pre>
-                &lt;p&gt;XML&lt;wbr&gt;Http&lt;wbr&gt;Request&lt;/p&gt;
-            </pre>
-            <p>Resultado:</p>
-            <p>XML<wbr>Http<wbr>Request</p>
-        </section>
+            <section>
+                <h2>&lt;video&gt;</h2>
+                <p>La etiqueta <code>&lt;video&gt;</code> se utiliza para insertar archivos de video. Permite controles para reproducir, pausar y ajustar el volumen, además de opciones de pantalla completa.</p>
+                <pre>
+&lt;video width="320" height="240" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Tu navegador no soporta el elemento de video.
+&lt;/video&gt;
+                </pre>
+                <p>Resultado:</p>
+                <video width="320" height="240" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 - Guía de etiquetas HTML5</p>
+        <p>&copy; 2024 - Guía de etiquetas HTML5 Ian Miguel Soler</p>
     </footer>
 </body>
 
