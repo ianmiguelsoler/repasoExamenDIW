@@ -12,6 +12,15 @@ body {
     line-height: 1.6;
     padding: 20px;
 }
+/*! Pruebas de funciones que se aplican y se quitan  */
+.alternada{
+    background-color: rgb(20, 195, 226);
+}
+.nueva-clase {
+    background-color: #3a6aec; 
+}
+/*? Pruebas de funciones que se aplican y se quitan  */
+
 
 /* Cabecera principal */
 header {
@@ -114,4 +123,182 @@ footer p {
     main {
         flex-direction: column;
     }
+}
+
+/*! Remplazo contenido en el dom */
+
+#reemplazo-contenido {
+    padding: 15px;
+    border-left: 4px solid #4a90e2;
+    background-color: #f7faff;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+#reemplazo-contenido p {
+    margin-bottom: 8px;
+}
+
+#resultado-reemplazo {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #eaeff5;
+    border-radius: 4px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9em;
+    color: #333;
+    overflow-x: auto;
+}
+
+
+/*! Inserción de elementos */
+#insercion-elementos {
+    padding: 15px;
+    border-left: 4px solid #4a90e2;
+    background-color: #f7faff;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+#contenedor-insercion {
+    padding: 10px;
+    background-color: #eaeff5;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para los botones en flexbox */
+#insercion-elementos button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+#insercion-elementos button:hover {
+    background-color: #357ab8;
+}
+
+#resultado-insercion {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #eaeff5;
+    border-radius: 4px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9em;
+    color: #333;
+    overflow-x: auto;
+}
+
+/* Estilo flexbox para los botones */
+#botones-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/*! Eliminar elementos con Dom */
+#eliminar-elementos {
+    padding: 15px;
+    border-left: 4px solid #4a90e2;
+    background-color: #f7faff;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+#contenedor-eliminar {
+    padding: 10px;
+    background-color: #eaeff5;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#resultado-eliminar {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #eaeff5;
+    border-radius: 4px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9em;
+    color: #333;
+    overflow-x: auto;
+}
+
+#eliminar-elementos button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+#eliminar-elementos button:hover {
+    background-color: #357ab8;
+}
+
+
+/*! Manipular Clases en CSS */
+#manipular-clases {
+    padding: 15px;
+    border-left: 4px solid #4a90e2;
+    background-color: #f7faff;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+#elemento-clase {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #eaeff5;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.caja {
+    border: 2px solid #4a90e2;
+}
+
+.resaltado {
+    background-color: yellow;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+#resultado-clase {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #eaeff5;
+    border-radius: 4px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9em;
+    color: #333;
+    overflow-x: auto;
+}
+
+#manipular-clases button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+#manipular-clases button:hover {
+    background-color: #357ab8;
 }
