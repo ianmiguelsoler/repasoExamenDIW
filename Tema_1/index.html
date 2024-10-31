@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Tipo Test - Diseño de Interfaces Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Preguntas Tipo Test - Diseño de Interfaces Web</h1>
+        <p>Seleccione la respuesta correcta para cada pregunta. Al final de la página, encontrará un resumen de los temas más importantes.</p>
+    </header>
+
+    <main id="preguntas">
+        <!-- Pregunta 1 -->
+        <section class="pregunta">
+            <h2>1. ¿Cuál es el propósito de la percepción visual en el diseño de interfaces web?</h2>
+            <div class="opciones">
+                <button onclick="verificarRespuesta(this, 'A')">A. Mejorar el rendimiento del sitio web</button>
+                <button onclick="verificarRespuesta(this, 'B')">B. Atraer y dirigir la atención del usuario</button>
+                <button onclick="verificarRespuesta(this, 'C')">C. Aumentar la cantidad de contenido</button>
+                <button onclick="verificarRespuesta(this, 'D')">D. Ninguna de las anteriores</button>
+            </div>
+            <p class="explicacion" id="explicacion1"></p>
+        </section>
+
+        <!-- Más preguntas pueden agregarse de forma similar -->
+
+    </main>
+
+    <!-- Resumen de los temas clave -->
+    <section id="resumen">
+        <h2>Resumen de los Temas Clave</h2>
+        <p>En esta sección se resumen los aspectos más importantes del diseño de interfaces web, según el contenido del documento.</p>
+        <ul>
+            <li><strong>Percepción Visual:</strong> Incluir color, fuentes, iconos y disposición de elementos para captar la atención.</li>
+            <li><strong>Fundamentos de Composición:</strong> Equilibrio visual y tensión compositiva para organizar los elementos visuales.</li>
+            <li><strong>Color, Tipografía e Iconos:</strong> Uso correcto del color, elección de fuentes y uso adecuado de iconos.</li>
+            <li><strong>Componentes de un Interfaz Web:</strong> Cabecera, sistema de navegación, cuerpo, pie de página y espacio negativo.</li>
+            <li><strong>Prototipos:</strong> Modelos iniciales para definir la estructura y navegación de una web.</li>
+            <li><strong>Guías de Estilo:</strong> Normas para mantener la coherencia visual y funcional en la web.</li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
