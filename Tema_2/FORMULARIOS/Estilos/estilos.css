@@ -29,3 +29,146 @@ main {
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+form fieldset {
+    border: 1px solid #4a90e2;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+form legend {
+    font-size: 1.2em;
+    color: #4a90e2;
+    padding: 0 10px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #357ab8;
+}
+
+.inputRestSubmit{
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.inputRestSubmit:hover {
+    background-color: #357ab8;
+}
+
+/* Estilo para el Resumen de Elementos de Formulario */
+section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+section h2 {
+    font-size: 1.8em;
+    color: #4a90e2;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+section ul li strong {
+    color: #4a90e2;
+}
+
+/* Estilo para resaltar los atributos */
+section ul li code {
+    background-color: #f3f4f6;
+    color: #d63384;
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.95em;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+/* Estilo para la tabla de atributos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4a90e2;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #4a90e2;
+}
+
+td code {
+    background-color: #f3f4f6;
+    color: #d63384;
+    font-weight: bold;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.95em;
+    font-family: Consolas, "Courier New", monospace;
+}
