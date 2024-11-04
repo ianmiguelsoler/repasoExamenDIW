@@ -154,3 +154,17 @@ code {
 .collapsible-section input[type="checkbox"]:checked + .section-header + .section-content {
     display: block;
 }
+
+
+details summary {
+    list-style: none;
+  }
+  
+  details summary::-webkit-details-marker {
+    display: none; /* Oculta la flecha en navegadores basados en WebKit */
+  }
+  
+  details summary::marker {
+    display: none; /* Oculta la flecha en otros navegadores compatibles */
+  }
+  
