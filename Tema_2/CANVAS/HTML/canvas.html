@@ -31,89 +31,114 @@
       </details>
     </section>
 
-    <!-- Ejemplo básico de Canvas -->
-    <section id="ejemplo-basico-canvas">
-      <details>
-        <summary>
-          <h2>Ejemplo Básico de Canvas</h2>
-        </summary>
-        <p>El siguiente ejemplo muestra cómo dibujar un rectángulo relleno y un contorno:</p>
-        <canvas id="miCanvas" width="300" height="150" class="canvas-example">
-          Tu navegador no soporta la etiqueta <code>&lt;canvas&gt;</code>.
-        </canvas>
-        <pre>
-<code>const canvas = document.getElementById('miCanvas');
-const ctx = canvas.getContext('2d');
-ctx.fillStyle = '#FF8F43';
-ctx.fillRect(20, 20, 100, 50);
-ctx.strokeStyle = '#8f9814';
-ctx.lineWidth = 3;
-ctx.strokeRect(150, 50, 100, 50);</code>
-        </pre>
-      </details>
-    </section>
+   <!-- Ejemplo básico de Canvas -->
+   <section id="ejemplo-basico-canvas">
+    <details>
+      <summary>
+        <h2>Ejemplo Básico de Canvas</h2>
+      </summary>
+      <p>El siguiente ejemplo muestra cómo dibujar un rectángulo relleno y un contorno:</p>
+      <canvas id="miCanvasBasico" width="300" height="150" class="canvas-example">
+        Tu navegador no soporta la etiqueta <code>&lt;canvas&gt;</code>.
+      </canvas>
+      <script>
+        document.querySelector('#ejemplo-basico-canvas details').addEventListener('toggle', function (event) {
+          if (event.target.open) {
+            const canvas = document.getElementById('miCanvasBasico');
+            const ctx = canvas.getContext('2d');
 
-    <!-- Rectángulo rojo -->
-    <section>
-      <details>
-        <summary>
-          <h2>1. Rectángulo Relleno en Rojo</h2>
-        </summary>
-        <canvas id="myCanvas" width="200" height="100"></canvas>
-        <script>
-          var c = document.getElementById("myCanvas");
-          var cxt = c.getContext("2d");
-          cxt.fillStyle = "#FF0000";
-          cxt.fillRect(0, 0, 150, 75);
-        </script>
-        <pre>
-<code>var c = document.getElementById("myCanvas");
-var cxt = c.getContext("2d");
-cxt.fillStyle = "#FF0000";
-cxt.fillRect(0, 0, 150, 75);</code>
-        </pre>
-      </details>
-    </section>
+            // Dibuja un rectángulo relleno de color
+            ctx.fillStyle = '#FF8F43';
+            ctx.fillRect(20, 20, 100, 50);
 
-    <!-- Líneas y triángulo -->
-    <section>
-      <details>
-        <summary>
-          <h2>2. Dibujar Líneas y Triángulo</h2>
-        </summary>
-        <canvas id="lineCanvas" width="300" height="300"></canvas>
-        <script>
-          var lineCanvas = document.getElementById("lineCanvas");
-          var ctx = lineCanvas.getContext("2d");
-          ctx.beginPath();
-          ctx.moveTo(5, 5);
-          ctx.lineTo(5, 295);
-          ctx.moveTo(295, 5);
-          ctx.lineTo(295, 295);
-          ctx.lineWidth = 1;
-          ctx.strokeStyle = "#CC0000";
-          ctx.stroke();
-          ctx.beginPath();
-          ctx.moveTo(300, 200);
-          ctx.lineTo(200, 150);
-          ctx.lineTo(200, 0);
-          ctx.closePath();
-          ctx.stroke();
-        </script>
-        <pre>
-<code>ctx.beginPath();
-ctx.moveTo(5, 5);
-ctx.lineTo(5, 295);
-ctx.stroke();
-ctx.beginPath();
-ctx.moveTo(300, 200);
-ctx.lineTo(200, 150);
-ctx.lineTo(200, 0);
-ctx.closePath();
-ctx.stroke();</code>
-        </pre>
-      </details>
-    </section>
+            // Dibuja un rectángulo de contorno
+            ctx.strokeStyle = '#8f9814';
+            ctx.lineWidth = 3;
+            ctx.strokeRect(150, 50, 100, 50);
+          }
+        });
+      </script>
+      <pre>
+        <code>const canvas = document.getElementById('miCanvasBasico');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#FF8F43';
+        ctx.fillRect(20, 20, 100, 50);
+        ctx.strokeStyle = '#8f9814';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(150, 50, 100, 50);</code>
+      </pre>
+    </details>
+  </section>
+
+      <!-- Rectángulo rojo -->
+      <section>
+        <details>
+          <summary>
+            <h2>1. Rectángulo Relleno en Rojo</h2>
+          </summary>
+          <canvas id="myCanvas" width="200" height="100"></canvas>
+          <script>
+            document.querySelector('#myCanvas').closest('details').addEventListener('toggle', function (event) {
+              if (event.target.open) {
+                var c = document.getElementById("myCanvas");
+                var cxt = c.getContext("2d");
+                cxt.fillStyle = "#FF0000";
+                cxt.fillRect(0, 0, 150, 75);
+              }
+            });
+          </script>
+          <pre>
+            <code>var c = document.getElementById("myCanvas");
+            var cxt = c.getContext("2d");
+            cxt.fillStyle = "#FF0000";
+            cxt.fillRect(0, 0, 150, 75);</code>
+                    </pre>
+        </details>
+      </section>
+
+  <!-- Líneas y triángulo -->
+  <section>
+    <details>
+      <summary>
+        <h2>2. Dibujar Líneas y Triángulo</h2>
+      </summary>
+      <canvas id="lineCanvas" width="300" height="300"></canvas>
+      <script>
+        document.querySelector('#lineCanvas').closest('details').addEventListener('toggle', function (event) {
+          if (event.target.open) {
+            var lineCanvas = document.getElementById("lineCanvas");
+            var ctx = lineCanvas.getContext("2d");
+            ctx.beginPath();
+            ctx.moveTo(5, 5);
+            ctx.lineTo(5, 295);
+            ctx.moveTo(295, 5);
+            ctx.lineTo(295, 295);
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = "#CC0000";
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(300, 200);
+            ctx.lineTo(200, 150);
+            ctx.lineTo(200, 0);
+            ctx.closePath();
+            ctx.stroke();
+          }
+        });
+      </script>
+      <pre>
+        <code>ctx.beginPath();
+        ctx.moveTo(5, 5);
+        ctx.lineTo(5, 295);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(300, 200);
+        ctx.lineTo(200, 150);
+        ctx.lineTo(200, 0);
+        ctx.closePath();
+        ctx.stroke();</code>
+                </pre>
+    </details>
+  </section>
 
     <!-- Arco y círculo -->
     <section>
@@ -123,18 +148,22 @@ ctx.stroke();</code>
         </summary>
         <canvas id="arcCanvas" width="300" height="300"></canvas>
         <script>
-          var arcCanvas = document.getElementById("arcCanvas");
-          var ctx = arcCanvas.getContext("2d");
-          ctx.beginPath();
-          ctx.arc(150, 150, 50, 0, 2 * Math.PI);
-          ctx.lineWidth = 10;
-          ctx.strokeStyle = "yellow";
-          ctx.stroke();
-          ctx.fillStyle = "#FF0000";
-          ctx.beginPath();
-          ctx.arc(70, 18, 15, 0, Math.PI * 2, true);
-          ctx.closePath();
-          ctx.fill();
+          document.querySelector('#arcCanvas').closest('details').addEventListener('toggle', function (event) {
+            if (event.target.open) {
+              var arcCanvas = document.getElementById("arcCanvas");
+              var ctx = arcCanvas.getContext("2d");
+              ctx.beginPath();
+              ctx.arc(150, 150, 50, 0, 2 * Math.PI);
+              ctx.lineWidth = 10;
+              ctx.strokeStyle = "yellow";
+              ctx.stroke();
+              ctx.fillStyle = "#FF0000";
+              ctx.beginPath();
+              ctx.arc(70, 18, 15, 0, Math.PI * 2, true);
+              ctx.closePath();
+              ctx.fill();
+            }
+          });
         </script>
         <pre>
 <code>ctx.beginPath();
@@ -157,12 +186,16 @@ ctx.fill();</code>
         </summary>
         <canvas id="textCanvas" width="200" height="100"></canvas>
         <script>
-          var textCanvas = document.getElementById("textCanvas");
-          var ctx = textCanvas.getContext("2d");
-          ctx.font = 'Bold 20px Tahoma';
-          ctx.textAlign = 'center';
-          ctx.fillStyle = 'black';
-          ctx.fillText('INTERFAZ', 50, 50);
+          document.querySelector('#textCanvas').closest('details').addEventListener('toggle', function (event) {
+            if (event.target.open) {
+              var textCanvas = document.getElementById("textCanvas");
+              var ctx = textCanvas.getContext("2d");
+              ctx.font = 'Bold 20px Tahoma';
+              ctx.textAlign = 'center';
+              ctx.fillStyle = 'black';
+              ctx.fillText('INTERFAZ', 50, 50);
+            }
+          });
         </script>
         <pre>
 <code>ctx.font = 'Bold 20px Tahoma';
@@ -184,8 +217,8 @@ ctx.fillText('INTERFAZ', 50, 50);</code>
           var imgCanvas = document.getElementById("imageCanvas");
           var ctx = imgCanvas.getContext("2d");
           var img = new Image();
-          img.src = 'img/ejemplo1.png';
-          img.onload = function(){
+          img.src = 'https://www.mundodeportivo.com/alfabeta/hero/2024/08/el-anime-de-dandadan-se-estrenara-el-3-de-octubre-de-2024.jpg?width=768&aspect_ratio=16:9&format=nowebp';
+          img.onload = cargaImagen =() => {
             ctx.drawImage(img, 10, 10);
           };
         </script>
@@ -198,6 +231,205 @@ img.onload = function(){
         </pre>
       </details>
     </section>
+
+
+
+
+     <!-- Uso de Gradientes, Sombras y Transparencia -->
+     <section id="gradientes-sombras-transparencia">
+      <details>
+        <summary>
+          <h2>6. Uso de Gradientes, Sombras y Transparencia</h2>
+        </summary>
+
+        <!-- Gradiente lineal -->
+        <h3>Gradiente Lineal</h3>
+        <canvas id="gradienteLinealCanvas" width="250" height="150"></canvas>
+        <script>
+          document.querySelector('#gradienteLinealCanvas').closest('details').addEventListener('toggle', function (event) {
+            if (event.target.open) {
+              var canvas = document.getElementById("gradienteLinealCanvas");
+              var ctx = canvas.getContext("2d");
+              var grd = ctx.createLinearGradient(0, 0, 175, 50);
+              grd.addColorStop(0, "#FF0000");
+              grd.addColorStop(1, "#00FF00");
+              ctx.fillStyle = grd;
+              ctx.fillRect(0, 0, 175, 50);
+            }
+          });
+        </script>
+        <pre>
+<code>var grd = ctx.createLinearGradient(0, 0, 175, 50);
+grd.addColorStop(0, "#FF0000");
+grd.addColorStop(1, "#00FF00");
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, 175, 50);</code>
+        </pre>
+
+        <!-- Gradiente radial -->
+        <h3>Gradiente Radial</h3>
+        <canvas id="gradienteRadialCanvas" width="250" height="150"></canvas>
+        <script>
+          document.querySelector('#gradienteRadialCanvas').closest('details').addEventListener('toggle', function (event) {
+            if (event.target.open) {
+              var canvas = document.getElementById("gradienteRadialCanvas");
+              var ctx = canvas.getContext("2d");
+              var grd = ctx.createRadialGradient(80, 125, 25, 125, 125, 120);
+              grd.addColorStop(0, "#8DF");
+              grd.addColorStop(1, "#04B");
+              ctx.fillStyle = grd;
+              ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+          });
+        </script>
+        <pre>
+<code>var grd = ctx.createRadialGradient(80, 125, 25, 125, 125, 120);
+grd.addColorStop(0, "#8DF");
+grd.addColorStop(1, "#04B");
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, canvas.width, canvas.height);</code>
+        </pre>
+
+        <!-- Sombras -->
+        <h3>Sombras</h3>
+        <canvas id="sombrasCanvas" width="250" height="150"></canvas>
+        <script>
+          document.querySelector('#sombrasCanvas').closest('details').addEventListener('toggle', function (event) {
+            if (event.target.open) {
+              var canvas = document.getElementById("sombrasCanvas");
+              var ctx = canvas.getContext("2d");
+              ctx.shadowBlur = 30;
+              ctx.shadowColor = "black";
+              ctx.fillStyle = "blue";
+              ctx.fillRect(50, 50, 150, 75);
+            }
+          });
+        </script>
+        <pre>
+<code>ctx.shadowBlur = 30;
+ctx.shadowColor = "black";
+ctx.fillStyle = "blue";
+ctx.fillRect(50, 50, 150, 75);</code>
+        </pre>
+
+        <!-- Transparencia -->
+        <h3>Transparencia</h3>
+        <canvas id="transparenciaCanvas" width="250" height="150"></canvas>
+        <script>
+          document.querySelector('#transparenciaCanvas').closest('details').addEventListener('toggle', function (event) {
+            if (event.target.open) {
+              var canvas = document.getElementById("transparenciaCanvas");
+              var ctx = canvas.getContext("2d");
+              ctx.globalAlpha = 0.75;
+              ctx.fillStyle = "#F00";
+              ctx.fillRect(60, 20, 75, 50);
+              ctx.fillStyle = "#0F0";
+              ctx.fillRect(90, 50, 75, 50);
+              ctx.fillStyle = "#00F";
+              ctx.fillRect(120, 80, 75, 50);
+            }
+          });
+        </script>
+        <pre>
+<code>ctx.globalAlpha = 0.75;
+ctx.fillStyle = "#F00";
+ctx.fillRect(60, 20, 75, 50);
+ctx.fillStyle = "#0F0";
+ctx.fillRect(90, 50, 75, 50);
+ctx.fillStyle = "#00F";
+ctx.fillRect(120, 80, 75, 50);</code>
+        </pre>
+
+        <!-- Escalera utilizando un bucle -->
+        <h3>Escalera con Bucle</h3>
+        <canvas id="escaleraCanvas" width="150" height="150"></canvas>
+        <script>
+          document.querySelector('#escaleraCanvas').closest('details').addEventListener('toggle', function (event) {
+            if (event.target.open) {
+              var canvas = document.getElementById("escaleraCanvas");
+              var ctx = canvas.getContext("2d");
+              ctx.beginPath();
+              ctx.moveTo(1, 1);
+              for (var i = 1; i < 100; i += 5) {
+                if ((i % 2) != 0) {
+                  ctx.lineTo(i + 5, i);
+                } else {
+                  ctx.lineTo(i, i + 5);
+                }
+              }
+              ctx.lineTo(1, 100);
+              ctx.closePath();
+              ctx.stroke();
+            }
+          });
+        </script>
+        <pre>
+<code>ctx.beginPath();
+ctx.moveTo(1, 1);
+for (var i = 1; i < 100; i += 5) {
+  if ((i % 2) != 0) {
+    ctx.lineTo(i + 5, i);
+  } else {
+    ctx.lineTo(i, i + 5);
+  }
+}
+ctx.lineTo(1, 100);
+ctx.closePath();
+ctx.stroke();</code>
+        </pre>
+      </details>
+    </section>
+
+
+
+
+
+      <!-- Creación de Patrones -->
+      <section id="creacion-patrones">
+        <details>
+          <summary>
+            <h2>7. Creación de Patrones</h2>
+          </summary>
+          <p>Este ejemplo muestra cómo crear un patrón repetido en el lienzo utilizando una imagen de fondo.</p>
+          
+          <canvas id="patronCanvas" width="300" height="300"></canvas>
+          <script>
+            document.querySelector('#patronCanvas').closest('details').addEventListener('toggle', function (event) {
+              if (event.target.open) {
+                var canvas = document.getElementById("patronCanvas");
+                var ctx = canvas.getContext("2d");
+  
+                // Crear una imagen para el patrón
+                var patron = new Image();
+                patron.src = "images/pattern.png"; // Asegúrate de que esta ruta sea correcta
+                patron.onload = function() {
+                  // Crear el patrón y aplicarlo como relleno
+                  ctx.fillStyle = ctx.createPattern(patron, "repeat");
+                  ctx.fillRect(50, 50, canvas.width - 100, canvas.height - 100);
+  
+                  // Aplicar el patrón como contorno
+                  ctx.strokeStyle = ctx.createPattern(patron, "repeat");
+                  ctx.lineWidth = 20;
+                  ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);
+                };
+              }
+            });
+          </script>
+          <pre>
+  <code>var canvas = document.getElementById("patronCanvas");
+  var ctx = canvas.getContext("2d");
+  var patron = new Image();
+  patron.src = "images/pattern.png";
+  patron.onload = function() {
+    ctx.fillStyle = ctx.createPattern(patron, "repeat");
+    ctx.fillRect(50, 50, canvas.width - 100, canvas.height - 100);
+    ctx.strokeStyle = ctx.createPattern(patron, "repeat");
+    ctx.lineWidth = 20;
+    ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);
+  };</code>
+          </pre>
+        </details>
+      </section>
 
   </main>
   
