@@ -1,3 +1,4 @@
+/* Estilo base */
 * {
     margin: 0;
     padding: 0;
@@ -8,128 +9,84 @@
 
 body {
     background-color: #f9f9f9;
+    line-height: 1.6;
     padding: 20px;
 }
 
+/* Cabecera principal */
 header {
     text-align: center;
     margin-bottom: 20px;
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     color: #4a90e2;
+    margin-bottom: 10px;
 }
 
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+header p {
+    font-size: 1.1em;
+    color: #666;
 }
 
-form fieldset {
-    border: 1px solid #4a90e2;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-}
-
-form legend {
-    font-size: 1.2em;
-    color: #4a90e2;
-    padding: 0 10px;
-}
-
-form label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-form input, form select, form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-form button {
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #4a90e2;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: #357ab8;
-}
-
-.inputRestSubmit{
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #4a90e2;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.inputRestSubmit:hover {
-    background-color: #357ab8;
-}
-
-/* Estilo para el Resumen de Elementos de Formulario */
-section {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 40px auto;
-}
-
-section h2 {
-    font-size: 1.8em;
-    color: #4a90e2;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-section ul {
-    list-style-type: disc;
+.listaEstilos{
     padding-left: 20px;
 }
 
-section ul li {
-    margin-bottom: 10px;
-    font-size: 1em;
-    color: #333;
+/* Contenedor principal */
+main {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-section ul li strong {
-    color: #4a90e2;
-}
-
-/* Estilo para resaltar los atributos */
-section ul li code {
-    background-color: #f3f4f6;
-    color: #d63384;
-    font-weight: bold;
-    padding: 2px 4px;
+/* Sección de cada etiqueta */
+section {
+    padding: 15px;
+    margin-top: 35px;
+    border-left: 4px solid #4a90e2;
+    background-color: #f7faff;
     border-radius: 4px;
-    font-size: 0.95em;
-    font-family: Consolas, "Courier New", monospace;
 }
+
+section h2 {
+    color: #4a90e2;
+    margin-bottom: 8px;
+    font-size: 1.6em;
+}
+
+section p {
+    margin-bottom: 8px;
+}
+
+/* Ejemplos de código */
+pre {
+    background-color: #eaeff5;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9em;
+    color: #333;
+    overflow-x: auto;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+footer p {
+    font-size: 1em;
+}
+
 
 /* Estilo para la tabla de atributos */
 table {
@@ -163,7 +120,7 @@ table caption {
     color: #4a90e2;
 }
 
-td code {
+code {
     background-color: #f3f4f6;
     color: #d63384;
     font-weight: bold;
