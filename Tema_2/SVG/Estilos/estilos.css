@@ -129,3 +129,28 @@ code {
     font-size: 0.95em;
     font-family: Consolas, "Courier New", monospace;
 }
+
+
+.collapsible-section {
+    margin-bottom: 10px;
+}
+
+/* Ocultar contenido por defecto */
+.section-content {
+    display: none;
+}
+
+/* Estilos para el encabezado */
+.section-header {
+    display: block;
+    background-color: #f0f0f0;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+/* Mostrar contenido cuando el checkbox está activado */
+.collapsible-section input[type="checkbox"]:checked + .section-header + .section-content {
+    display: block;
+}
