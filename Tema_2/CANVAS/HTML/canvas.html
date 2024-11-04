@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uso del elemento Canvas en HTML5</title>
+  <link rel="stylesheet" href="../Estilos/estilos.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Introducción al elemento <code>&lt;canvas&gt;</code> en HTML5</h1>
+    <p>
+      El elemento <code>&lt;canvas&gt;</code> es una superficie para dibujar gráficos dinámicos mediante JavaScript.
+      Permite crear imágenes, gráficos, animaciones y otras visualizaciones en un entorno bidimensional.
+    </p>
+  </header>
+
+  <main>
+    <!-- Resumen sobre la etiqueta Canvas -->
+    <section id="resumen-canvas">
+      <details>
+        <summary>
+          <h2>La Etiqueta Canvas</h2>
+        </summary>
+        <p>
+          La etiqueta <code>&lt;canvas&gt;</code> permite dibujar gráficos dinámicos mediante JavaScript. A diferencia de
+          SVG, <code>Canvas</code> no es un elemento del DOM y su contenido es un solo plano de píxeles.
+        </p>
+      </details>
+    </section>
+
+    <!-- Ejemplo básico de Canvas -->
+    <section id="ejemplo-basico-canvas">
+      <details>
+        <summary>
+          <h2>Ejemplo Básico de Canvas</h2>
+        </summary>
+        <p>El siguiente ejemplo muestra cómo dibujar un rectángulo relleno y un contorno:</p>
+        <canvas id="miCanvas" width="300" height="150" class="canvas-example">
+          Tu navegador no soporta la etiqueta <code>&lt;canvas&gt;</code>.
+        </canvas>
+        <pre>
+<code>const canvas = document.getElementById('miCanvas');
+const ctx = canvas.getContext('2d');
+ctx.fillStyle = '#FF8F43';
+ctx.fillRect(20, 20, 100, 50);
+ctx.strokeStyle = '#8f9814';
+ctx.lineWidth = 3;
+ctx.strokeRect(150, 50, 100, 50);</code>
+        </pre>
+      </details>
+    </section>
+
+    <!-- Rectángulo rojo -->
+    <section>
+      <details>
+        <summary>
+          <h2>1. Rectángulo Relleno en Rojo</h2>
+        </summary>
+        <canvas id="myCanvas" width="200" height="100"></canvas>
+        <script>
+          var c = document.getElementById("myCanvas");
+          var cxt = c.getContext("2d");
+          cxt.fillStyle = "#FF0000";
+          cxt.fillRect(0, 0, 150, 75);
+        </script>
+        <pre>
+<code>var c = document.getElementById("myCanvas");
+var cxt = c.getContext("2d");
+cxt.fillStyle = "#FF0000";
+cxt.fillRect(0, 0, 150, 75);</code>
+        </pre>
+      </details>
+    </section>
+
+    <!-- Líneas y triángulo -->
+    <section>
+      <details>
+        <summary>
+          <h2>2. Dibujar Líneas y Triángulo</h2>
+        </summary>
+        <canvas id="lineCanvas" width="300" height="300"></canvas>
+        <script>
+          var lineCanvas = document.getElementById("lineCanvas");
+          var ctx = lineCanvas.getContext("2d");
+          ctx.beginPath();
+          ctx.moveTo(5, 5);
+          ctx.lineTo(5, 295);
+          ctx.moveTo(295, 5);
+          ctx.lineTo(295, 295);
+          ctx.lineWidth = 1;
+          ctx.strokeStyle = "#CC0000";
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.moveTo(300, 200);
+          ctx.lineTo(200, 150);
+          ctx.lineTo(200, 0);
+          ctx.closePath();
+          ctx.stroke();
+        </script>
+        <pre>
+<code>ctx.beginPath();
+ctx.moveTo(5, 5);
+ctx.lineTo(5, 295);
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(300, 200);
+ctx.lineTo(200, 150);
+ctx.lineTo(200, 0);
+ctx.closePath();
+ctx.stroke();</code>
+        </pre>
+      </details>
+    </section>
+
+    <!-- Arco y círculo -->
+    <section>
+      <details>
+        <summary>
+          <h2>3. Dibujar Arco y Círculo</h2>
+        </summary>
+        <canvas id="arcCanvas" width="300" height="300"></canvas>
+        <script>
+          var arcCanvas = document.getElementById("arcCanvas");
+          var ctx = arcCanvas.getContext("2d");
+          ctx.beginPath();
+          ctx.arc(150, 150, 50, 0, 2 * Math.PI);
+          ctx.lineWidth = 10;
+          ctx.strokeStyle = "yellow";
+          ctx.stroke();
+          ctx.fillStyle = "#FF0000";
+          ctx.beginPath();
+          ctx.arc(70, 18, 15, 0, Math.PI * 2, true);
+          ctx.closePath();
+          ctx.fill();
+        </script>
+        <pre>
+<code>ctx.beginPath();
+ctx.arc(150, 150, 50, 0, 2 * Math.PI);
+ctx.lineWidth = 10;
+ctx.strokeStyle = "yellow";
+ctx.stroke();
+ctx.fillStyle = "#FF0000";
+ctx.arc(70, 18, 15, 0, Math.PI * 2, true);
+ctx.fill();</code>
+        </pre>
+      </details>
+    </section>
+
+    <!-- Texto en Canvas -->
+    <section>
+      <details>
+        <summary>
+          <h2>4. Dibujar Texto en Canvas</h2>
+        </summary>
+        <canvas id="textCanvas" width="200" height="100"></canvas>
+        <script>
+          var textCanvas = document.getElementById("textCanvas");
+          var ctx = textCanvas.getContext("2d");
+          ctx.font = 'Bold 20px Tahoma';
+          ctx.textAlign = 'center';
+          ctx.fillStyle = 'black';
+          ctx.fillText('INTERFAZ', 50, 50);
+        </script>
+        <pre>
+<code>ctx.font = 'Bold 20px Tahoma';
+ctx.textAlign = 'center';
+ctx.fillStyle = 'black';
+ctx.fillText('INTERFAZ', 50, 50);</code>
+        </pre>
+      </details>
+    </section>
+
+    <!-- Imágenes en Canvas -->
+    <section>
+      <details>
+        <summary>
+          <h2>5. Dibujar Imágenes en Canvas</h2>
+        </summary>
+        <canvas id="imageCanvas" width="300" height="200"></canvas>
+        <script>
+          var imgCanvas = document.getElementById("imageCanvas");
+          var ctx = imgCanvas.getContext("2d");
+          var img = new Image();
+          img.src = 'img/ejemplo1.png';
+          img.onload = function(){
+            ctx.drawImage(img, 10, 10);
+          };
+        </script>
+        <pre>
+<code>var img = new Image();
+img.src = 'img/ejemplo1.png';
+img.onload = function(){
+    ctx.drawImage(img, 10, 10);
+};</code>
+        </pre>
+      </details>
+    </section>
+
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 - Ejemplo Canvas por Ian Miguel Soler</p>
+  </footer>
+  
+  <script src="../JavaScript/script.js"></script>
+</body>
+
+</html>
