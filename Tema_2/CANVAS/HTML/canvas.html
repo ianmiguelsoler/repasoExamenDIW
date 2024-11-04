@@ -25,40 +25,41 @@
           <h2>La Etiqueta Canvas</h2>
         </summary>
         <p>
-          La etiqueta <code>&lt;canvas&gt;</code> permite dibujar gráficos dinámicos mediante JavaScript. A diferencia de
+          La etiqueta <code>&lt;canvas&gt;</code> permite dibujar gráficos dinámicos mediante JavaScript. A diferencia
+          de
           SVG, <code>Canvas</code> no es un elemento del DOM y su contenido es un solo plano de píxeles.
         </p>
       </details>
     </section>
 
-   <!-- Ejemplo básico de Canvas -->
-   <section id="ejemplo-basico-canvas">
-    <details>
-      <summary>
-        <h2>Ejemplo Básico de Canvas</h2>
-      </summary>
-      <p>El siguiente ejemplo muestra cómo dibujar un rectángulo relleno y un contorno:</p>
-      <canvas id="miCanvasBasico" width="300" height="150" class="canvas-example">
-        Tu navegador no soporta la etiqueta <code>&lt;canvas&gt;</code>.
-      </canvas>
-      <script>
-        document.querySelector('#ejemplo-basico-canvas details').addEventListener('toggle', function (event) {
-          if (event.target.open) {
-            const canvas = document.getElementById('miCanvasBasico');
-            const ctx = canvas.getContext('2d');
+    <!-- Ejemplo básico de Canvas -->
+    <section id="ejemplo-basico-canvas">
+      <details>
+        <summary>
+          <h2>Ejemplo Básico de Canvas</h2>
+        </summary>
+        <p>El siguiente ejemplo muestra cómo dibujar un rectángulo relleno y un contorno:</p>
+        <canvas id="miCanvasBasico" width="300" height="150" class="canvas-example">
+          Tu navegador no soporta la etiqueta <code>&lt;canvas&gt;</code>.
+        </canvas>
+        <script>
+          document.querySelector('#ejemplo-basico-canvas details').addEventListener('toggle', function (event) {
+            if (event.target.open) {
+              const canvas = document.getElementById('miCanvasBasico');
+              const ctx = canvas.getContext('2d');
 
-            // Dibuja un rectángulo relleno de color
-            ctx.fillStyle = '#FF8F43';
-            ctx.fillRect(20, 20, 100, 50);
+              // Dibuja un rectángulo relleno de color
+              ctx.fillStyle = '#FF8F43';
+              ctx.fillRect(20, 20, 100, 50);
 
-            // Dibuja un rectángulo de contorno
-            ctx.strokeStyle = '#8f9814';
-            ctx.lineWidth = 3;
-            ctx.strokeRect(150, 50, 100, 50);
-          }
-        });
-      </script>
-      <pre>
+              // Dibuja un rectángulo de contorno
+              ctx.strokeStyle = '#8f9814';
+              ctx.lineWidth = 3;
+              ctx.strokeRect(150, 50, 100, 50);
+            }
+          });
+        </script>
+        <pre>
         <code>const canvas = document.getElementById('miCanvasBasico');
         const ctx = canvas.getContext('2d');
         ctx.fillStyle = '#FF8F43';
@@ -67,65 +68,65 @@
         ctx.lineWidth = 3;
         ctx.strokeRect(150, 50, 100, 50);</code>
       </pre>
-    </details>
-  </section>
+      </details>
+    </section>
 
-      <!-- Rectángulo rojo -->
-      <section>
-        <details>
-          <summary>
-            <h2>1. Rectángulo Relleno en Rojo</h2>
-          </summary>
-          <canvas id="myCanvas" width="200" height="100"></canvas>
-          <script>
-            document.querySelector('#myCanvas').closest('details').addEventListener('toggle', function (event) {
-              if (event.target.open) {
-                var c = document.getElementById("myCanvas");
-                var cxt = c.getContext("2d");
-                cxt.fillStyle = "#FF0000";
-                cxt.fillRect(0, 0, 150, 75);
-              }
-            });
-          </script>
-          <pre>
+    <!-- Rectángulo rojo -->
+    <section>
+      <details>
+        <summary>
+          <h2>1. Rectángulo Relleno en Rojo</h2>
+        </summary>
+        <canvas id="myCanvas" width="200" height="100"></canvas>
+        <script>
+          document.querySelector('#myCanvas').closest('details').addEventListener('toggle', function (event) {
+            if (event.target.open) {
+              var c = document.getElementById("myCanvas");
+              var cxt = c.getContext("2d");
+              cxt.fillStyle = "#FF0000";
+              cxt.fillRect(0, 0, 150, 75);
+            }
+          });
+        </script>
+        <pre>
             <code>var c = document.getElementById("myCanvas");
             var cxt = c.getContext("2d");
             cxt.fillStyle = "#FF0000";
             cxt.fillRect(0, 0, 150, 75);</code>
                     </pre>
-        </details>
-      </section>
+      </details>
+    </section>
 
-  <!-- Líneas y triángulo -->
-  <section>
-    <details>
-      <summary>
-        <h2>2. Dibujar Líneas y Triángulo</h2>
-      </summary>
-      <canvas id="lineCanvas" width="300" height="300"></canvas>
-      <script>
-        document.querySelector('#lineCanvas').closest('details').addEventListener('toggle', function (event) {
-          if (event.target.open) {
-            var lineCanvas = document.getElementById("lineCanvas");
-            var ctx = lineCanvas.getContext("2d");
-            ctx.beginPath();
-            ctx.moveTo(5, 5);
-            ctx.lineTo(5, 295);
-            ctx.moveTo(295, 5);
-            ctx.lineTo(295, 295);
-            ctx.lineWidth = 1;
-            ctx.strokeStyle = "#CC0000";
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(300, 200);
-            ctx.lineTo(200, 150);
-            ctx.lineTo(200, 0);
-            ctx.closePath();
-            ctx.stroke();
-          }
-        });
-      </script>
-      <pre>
+    <!-- Líneas y triángulo -->
+    <section>
+      <details>
+        <summary>
+          <h2>2. Dibujar Líneas y Triángulo</h2>
+        </summary>
+        <canvas id="lineCanvas" width="300" height="300"></canvas>
+        <script>
+          document.querySelector('#lineCanvas').closest('details').addEventListener('toggle', function (event) {
+            if (event.target.open) {
+              var lineCanvas = document.getElementById("lineCanvas");
+              var ctx = lineCanvas.getContext("2d");
+              ctx.beginPath();
+              ctx.moveTo(5, 5);
+              ctx.lineTo(5, 295);
+              ctx.moveTo(295, 5);
+              ctx.lineTo(295, 295);
+              ctx.lineWidth = 1;
+              ctx.strokeStyle = "#CC0000";
+              ctx.stroke();
+              ctx.beginPath();
+              ctx.moveTo(300, 200);
+              ctx.lineTo(200, 150);
+              ctx.lineTo(200, 0);
+              ctx.closePath();
+              ctx.stroke();
+            }
+          });
+        </script>
+        <pre>
         <code>ctx.beginPath();
         ctx.moveTo(5, 5);
         ctx.lineTo(5, 295);
@@ -137,8 +138,8 @@
         ctx.closePath();
         ctx.stroke();</code>
                 </pre>
-    </details>
-  </section>
+      </details>
+    </section>
 
     <!-- Arco y círculo -->
     <section>
@@ -218,7 +219,7 @@ ctx.fillText('INTERFAZ', 50, 50);</code>
           var ctx = imgCanvas.getContext("2d");
           var img = new Image();
           img.src = 'https://www.mundodeportivo.com/alfabeta/hero/2024/08/el-anime-de-dandadan-se-estrenara-el-3-de-octubre-de-2024.jpg?width=768&aspect_ratio=16:9&format=nowebp';
-          img.onload = cargaImagen =() => {
+          img.onload = cargaImagen = () => {
             ctx.drawImage(img, 10, 10);
           };
         </script>
@@ -235,8 +236,8 @@ img.onload = function(){
 
 
 
-     <!-- Uso de Gradientes, Sombras y Transparencia -->
-     <section id="gradientes-sombras-transparencia">
+    <!-- Uso de Gradientes, Sombras y Transparencia -->
+    <section id="gradientes-sombras-transparencia">
       <details>
         <summary>
           <h2>6. Uso de Gradientes, Sombras y Transparencia</h2>
@@ -384,38 +385,38 @@ ctx.stroke();</code>
 
 
 
-      <!-- Creación de Patrones -->
-      <section id="creacion-patrones">
-        <details>
-          <summary>
-            <h2>7. Creación de Patrones</h2>
-          </summary>
-          <p>Este ejemplo muestra cómo crear un patrón repetido en el lienzo utilizando una imagen de fondo.</p>
-          
-          <canvas id="patronCanvas" width="300" height="300"></canvas>
-          <script>
-            document.querySelector('#patronCanvas').closest('details').addEventListener('toggle', function (event) {
-              if (event.target.open) {
-                var canvas = document.getElementById("patronCanvas");
-                var ctx = canvas.getContext("2d");
-  
-                // Crear una imagen para el patrón
-                var patron = new Image();
-                patron.src = "images/pattern.png"; // Asegúrate de que esta ruta sea correcta
-                patron.onload = function() {
-                  // Crear el patrón y aplicarlo como relleno
-                  ctx.fillStyle = ctx.createPattern(patron, "repeat");
-                  ctx.fillRect(50, 50, canvas.width - 100, canvas.height - 100);
-  
-                  // Aplicar el patrón como contorno
-                  ctx.strokeStyle = ctx.createPattern(patron, "repeat");
-                  ctx.lineWidth = 20;
-                  ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);
-                };
-              }
-            });
-          </script>
-          <pre>
+    <!-- Creación de Patrones -->
+    <section id="creacion-patrones">
+      <details>
+        <summary>
+          <h2>7. Creación de Patrones</h2>
+        </summary>
+        <p>Este ejemplo muestra cómo crear un patrón repetido en el lienzo utilizando una imagen de fondo.</p>
+
+        <canvas id="patronCanvas" width="300" height="300"></canvas>
+        <script>
+          document.querySelector('#patronCanvas').closest('details').addEventListener('toggle', function (event) {
+            if (event.target.open) {
+              var canvas = document.getElementById("patronCanvas");
+              var ctx = canvas.getContext("2d");
+
+              // Crear una imagen para el patrón
+              var patron = new Image();
+              patron.src = "https://www.mundodeportivo.com/alfabeta/hero/2024/08/el-anime-de-dandadan-se-estrenara-el-3-de-octubre-de-2024.jpg?width=768&aspect_ratio=16:9&format=nowebp"; // Asegúrate de que esta ruta sea correcta
+              patron.onload = function () {
+                // Crear el patrón y aplicarlo como relleno
+                ctx.fillStyle = ctx.createPattern(patron, "repeat");
+                ctx.fillRect(50, 50, canvas.width - 100, canvas.height - 100);
+
+                // Aplicar el patrón como contorno
+                ctx.strokeStyle = ctx.createPattern(patron, "repeat");
+                ctx.lineWidth = 20;
+                ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);
+              };
+            }
+          });
+        </script>
+        <pre>
   <code>var canvas = document.getElementById("patronCanvas");
   var ctx = canvas.getContext("2d");
   var patron = new Image();
@@ -428,15 +429,150 @@ ctx.stroke();</code>
     ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);
   };</code>
           </pre>
-        </details>
-      </section>
+      </details>
+    </section>
+
+
+    <!-- Creación de Patrones con Canvas -->
+    <section id="patrones-canvas">
+      <details>
+        <summary>
+          <h2>8. Creación de Patrones desde Otro Canvas</h2>
+        </summary>
+        <p>Este ejemplo muestra cómo crear un patrón en un canvas usando otro canvas como origen del patrón.</p>
+
+        <!-- Canvas para el patrón -->
+        <canvas id="patron" width="10" height="15">No tiene soporte para canvas</canvas>
+
+        <!-- Canvas principal donde se aplicará el patrón -->
+        <canvas id="lienzo1" width="200" height="160">No tiene soporte para canvas</canvas>
+
+        <script>
+          // Dibujar en el canvas de patrón
+          var canvasP = document.getElementById("patron");
+          if (canvasP && canvasP.getContext) {
+            var ctxP = canvasP.getContext("2d");
+            if (ctxP) {
+              ctxP.lineWidth = 1;
+              ctxP.strokeStyle = "#ccc";
+              ctxP.beginPath();
+              ctxP.moveTo(canvasP.width, 0);
+              ctxP.lineTo(0, canvasP.height);
+              ctxP.stroke();
+            }
+          }
+
+          // Crear el patrón en el canvas principal
+          var canvas1 = document.getElementById("lienzo1");
+          if (canvas1 && canvas1.getContext) {
+            var ctx1 = canvas1.getContext("2d");
+            if (ctx1) {
+              ctx1.save();
+              ctx1.fillStyle = ctx1.createPattern(canvasP, "repeat");
+              ctx1.fillRect(0, 0, canvas1.width, canvas1.height);
+              ctx1.restore();
+              ctx1.font = "18px Arial";
+              ctx1.textAlign = "center";
+              ctx1.textBaseline = "middle";
+              ctx1.fillText("lienzo1", canvas1.width / 2, canvas1.height / 2);
+            }
+          }
+        </script>
+        <pre>
+      <code>
+        var canvasP = document.getElementById("patron");
+        if (canvasP && canvasP.getContext) {
+          var ctxP = canvasP.getContext("2d");
+          if (ctxP) {
+            ctxP.lineWidth = 1;
+            ctxP.strokeStyle = "#ccc";
+            ctxP.beginPath();
+            ctxP.moveTo(canvasP.width, 0);
+            ctxP.lineTo(0, canvasP.height);
+            ctxP.stroke();
+          }
+        }
+
+        var canvas1 = document.getElementById("lienzo1");
+        if (canvas1 && canvas1.getContext) {
+          var ctx1 = canvas1.getContext("2d");
+          if (ctx1) {
+            ctx1.save();
+            ctx1.fillStyle = ctx1.createPattern(canvasP, "repeat");
+            ctx1.fillRect(0, 0, canvas1.width, canvas1.height);
+            ctx1.restore();
+            ctx1.font = "18px Arial";
+            ctx1.textAlign = "center";
+            ctx1.textBaseline = "middle";
+            ctx1.fillText("lienzo1", canvas1.width / 2, canvas1.height / 2);
+          }
+        }
+      </code>
+    </pre>
+      </details>
+    </section>
+
+    <section style="padding-top: 20px;">
+      <details>
+        <summary>
+          <h2>9. Cambiar Color A Una Imagen</h2>
+        </summary>
+      <div style=" border-color: black; border-width: 5px; border-style: dashed;">
+        <p style="font-family: sans-serif; font-size: 20px; font-weight: bolder; padding: 10px;">5. Convierte una imagen de tu elección a color sepia modificando el color de cada uno de los píxeles
+          sabiendo que para ello hay que usar la fórmula indicada a continuación. Toma como base el ejemplo
+          donde se convierte la imagen a blanco y negro para trabajar con los colores de los píxeles.</p>
+      
+          <canvas id="imagen" width="600" height="680"></canvas>
+      </div>   
+      <script>
+        //Imagen canvas ejercicio 5.
+    var canvasImagen = document.getElementById('imagen');
+    var ctxImagen = canvasImagen.getContext("2d");
+    var img = new Image();
+    img.crossOrigin = "anonymous"; // Intenta cargar la imagen con CORS
+    img.src = 'https://i.postimg.cc/DzsMYk0q/79597e39-a88f-4314-b5dc-96a02b345001.jpg';
+
+    img.onload = function() {
+        // Dibuja la imagen en el canvas
+        ctxImagen.drawImage(img, 0, 0);
+
+        // Obtiene los datos de la imagen en el canvas
+        var imageData = ctxImagen.getImageData(0, 0, canvasImagen.width, canvasImagen.height);
+        var data = imageData.data;
+
+        // Recorre cada píxel y aplica las fórmulas con las condiciones
+        for (var i = 0; i < data.length; i += 4) {
+            var r = data[i];     // Valor R del píxel
+            var g = data[i + 1]; // Valor G del píxel
+            var b = data[i + 2]; // Valor B del píxel
+
+            // Calcula los nuevos valores tr, tg, tb
+            var tr = Math.trunc(0.393 * r + 0.769 * g + 0.189 * b);
+            var tg = Math.trunc(0.349 * r + 0.686 * g + 0.168 * b);
+            var tb = Math.trunc(0.272 * r + 0.534 * g + 0.131 * b);
+
+            // Aplica las condiciones para truncar los valores
+            data[i] = tr > 255 ? 255 : tr;       // Si tr > 255, R = 255, si no R = tr
+            data[i + 1] = tg > 255 ? 255 : tg;   // Si tg > 255, G = 255, si no G = tg
+            data[i + 2] = tb > 255 ? 255 : tb;   // Si tb > 255, B = 255, si no B = tb
+            // data[i + 3] es el valor Alpha, lo dejamos sin cambios
+        }
+
+        // Actualiza el canvas con los nuevos datos
+        ctxImagen.putImageData(imageData, 0, 0);
+    };
+
+      </script>
+    </details>
+    </section>
+
 
   </main>
-  
+
   <footer>
     <p>&copy; 2024 - Ejemplo Canvas por Ian Miguel Soler</p>
   </footer>
-  
+
   <script src="../JavaScript/script.js"></script>
 </body>
 
