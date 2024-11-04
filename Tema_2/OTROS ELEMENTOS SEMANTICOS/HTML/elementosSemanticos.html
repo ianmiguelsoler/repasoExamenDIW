@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Elementos Semánticos HTML5</title>
+    <link rel="stylesheet" href="../Estilos/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Guía de Elementos Semánticos en HTML5</h1>
+        <p>Breve descripción y ejemplos de uso de las etiquetas semánticas de HTML5.</p>
+    </header>
+
+    <main>
+        <table border="1" cellspacing="0" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Elemento</th>
+                    <th>Descripción</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>&lt;s&gt;</code></td>
+                    <td>Representa contenido que ya no es relevante o aplicable, mostrándolo con un tachado.</td>
+                    <td><s>Este artículo ya no está disponible.</s></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;ins&gt;</code> y <code>&lt;del&gt;</code></td>
+                    <td>Indican inserciones y eliminaciones en el documento. <code>&lt;ins&gt;</code> subraya el texto añadido y <code>&lt;del&gt;</code> tacha el texto eliminado.</td>
+                    <td>Reunión: <del datetime="2023-10-01">Jueves</del> <ins datetime="2023-10-02">Viernes</ins></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;q&gt;</code></td>
+                    <td>Define una cita breve en el texto, con comillas automáticas.</td>
+                    <td><q cite="https://www.example.com">Esta es una cita breve.</q></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;abbr&gt;</code> y <code>&lt;dfn&gt;</code></td>
+                    <td>Para abreviaturas y definiciones. <code>&lt;abbr&gt;</code> define el texto abreviado y <code>&lt;dfn&gt;</code> destaca una definición.</td>
+                    <td><dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn> es el lenguaje de marcado de la web.</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;code&gt;</code></td>
+                    <td>Para mostrar código de programación en el documento.</td>
+                    <td><code>let x = 10;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;samp&gt;</code></td>
+                    <td>Representa la salida de un sistema informático o aplicación.</td>
+                    <td><samp>Error: Archivo no encontrado</samp></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;kbd&gt;</code></td>
+                    <td>Indica combinaciones de teclas o entradas del usuario.</td>
+                    <td>Para guardar, presione <kbd>Ctrl</kbd> + <kbd>S</kbd>.</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;var&gt;</code></td>
+                    <td>Representa una variable en un contexto matemático o de programación.</td>
+                    <td><var>x</var> = 10</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;data&gt;</code></td>
+                    <td>Asocia contenido con un valor legible por máquina.</td>
+                    <td><data value="10">diez</data></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;sup&gt;</code> y <code>&lt;sub&gt;</code></td>
+                    <td>Representan superíndice y subíndice, utilizados para convenciones tipográficas.</td>
+                    <td>H<sub>2</sub>O y E = mc<sup>2</sup></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Más Elementos Semanticos PDF TEMA 2-5 por Ian Miguel Soler</p>
+    </footer>
+</body>
+</html>

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manipulación del DOM</title>
-    <link rel="stylesheet" href="../Estilos/estilos.css">
+    <link rel="stylesheet" href="../Estilos/estilos.css" />
 </head>
+
 <body>
     <header>
         <h1>Práctica de Manipulación del DOM</h1>
-        <p>Aprendiendo a trabajar con el Document Object Model (DOM) en JavaScript.</p>
+        <p>
+            Aprendiendo a trabajar con el Document Object Model (DOM) en JavaScript.
+        </p>
     </header>
 
     <main>
@@ -20,13 +24,17 @@
                 <button onclick="buscarPorClase()">Buscar por Clase</button>
                 <button onclick="buscarPorEtiqueta()">Buscar por Etiqueta</button>
                 <button onclick="buscarPorSelector()">Buscar por Selector CSS</button>
-                <button onclick="buscarPorSelectorTodos()">Buscar por querySelectorAll</button>
+                <button onclick="buscarPorSelectorTodos()">
+                    Buscar por querySelectorAll
+                </button>
                 <div id="resultado-busqueda"></div>
             </section>
 
             <section id="manipulacion-clases">
                 <h2>Manipulación de clases</h2>
-                <div id="elemento-manipular" class="uwu">Elemento para manipular clases que contiene la clase caja</div>
+                <div id="elemento-manipular" class="uwu">
+                    Elemento para manipular clases que contiene la clase caja
+                </div>
                 <div class="uwu">Contiene la clase caja</div>
 
                 <button onclick="alternarClase()">Alternar Clase</button>
@@ -36,11 +44,19 @@
 
             <section id="reemplazo-contenido">
                 <h2>Reemplazar Contenido en el DOM</h2>
-                <p id="parrafo-reemplazo">Este es el contenido original del párrafo.</p>
+                <p id="parrafo-reemplazo">
+                    Este es el contenido original del párrafo.
+                </p>
                 <button onclick="mostrarNodeName()">Mostrar nodeName</button>
-                <button onclick="reemplazarTextContent()">Reemplazar con textContent</button>
-                <button onclick="reemplazarInnerHTML()">Reemplazar con innerHTML</button>
-                <button onclick="reemplazarOuterHTML()">Reemplazar con outerHTML</button>
+                <button onclick="reemplazarTextContent()">
+                    Reemplazar con textContent
+                </button>
+                <button onclick="reemplazarInnerHTML()">
+                    Reemplazar con innerHTML
+                </button>
+                <button onclick="reemplazarOuterHTML()">
+                    Reemplazar con outerHTML
+                </button>
                 <div id="resultado-reemplazo"></div>
             </section>
 
@@ -50,65 +66,91 @@
                     <p>Elemento existente en el contenedor.</p>
                 </div>
                 <div id="botones-contenedor">
-                <!-- Botones de inserción -->
-                <button onclick="insertarAppendChild()">Insertar con appendChild</button>
-                <button onclick="insertarAdjacentElement()">Insertar con insertAdjacentElement</button>
-                <button onclick="insertarAdjacentHTML()">Insertar con insertAdjacentHTML</button>
-                <button onclick="insertarAdjacentText()">Insertar con insertAdjacentText</button>
-                <button onclick="insertarBefore()">Insertar con insertBefore</button>
-            
-                <!-- Botones de inserción en posiciones específicas -->
-                <button onclick="insertarAfterBegin()">Insertar en afterbegin</button>
-                <button onclick="insertarBeforeEnd()">Insertar en beforeend</button>
-                <button onclick="insertarAfterEnd()">Insertar en afterend</button>
-            
-                <!-- Botón para borrar las inserciones -->
-                <button onclick="borrarInserciones()">Borrar todas las inserciones</button>
+                    <!-- Botones de inserción -->
+                    <button onclick="insertarAppendChild()">
+                        Insertar con appendChild
+                    </button>
+                    <button onclick="insertarAdjacentElement()">
+                        Insertar con insertAdjacentElement
+                    </button>
+                    <button onclick="insertarAdjacentHTML()">
+                        Insertar con insertAdjacentHTML
+                    </button>
+                    <button onclick="insertarAdjacentText()">
+                        Insertar con insertAdjacentText
+                    </button>
+                    <button onclick="insertarBefore()">
+                        Insertar con insertBefore
+                    </button>
+
+                    <!-- Botones de inserción en posiciones específicas -->
+                    <button onclick="insertarAfterBegin()">
+                        Insertar en afterbegin
+                    </button>
+                    <button onclick="insertarBeforeEnd()">Insertar en beforeend</button>
+                    <button onclick="insertarAfterEnd()">Insertar en afterend</button>
+
+                    <!-- Botón para borrar las inserciones -->
+                    <button onclick="borrarInserciones()">
+                        Borrar todas las inserciones
+                    </button>
                 </div>
                 <div id="resultado-insercion"></div>
-            </section>   
-            
+            </section>
+
             <section id="eliminar-elementos">
                 <h2>Eliminar Elementos en el DOM</h2>
                 <div id="contenedor-eliminar">
-                    <p id="parrafo-eliminar">Este párrafo será eliminado con .remove().</p>
-                    <p id="parrafo-removeChild">Este párrafo será eliminado con .removeChild().</p>
-                    <p id="parrafo-replaceChild">Este párrafo será reemplazado con .replaceChild().</p>
+                    <p id="parrafo-eliminar">
+                        Este párrafo será eliminado con .remove().
+                    </p>
+                    <p id="parrafo-removeChild">
+                        Este párrafo será eliminado con .removeChild().
+                    </p>
+                    <p id="parrafo-replaceChild">
+                        Este párrafo será reemplazado con .replaceChild().
+                    </p>
                 </div>
-            
+
                 <button onclick="eliminarConRemove()">Eliminar con .remove()</button>
-                <button onclick="eliminarConRemoveChild()">Eliminar con .removeChild()</button>
-                <button onclick="reemplazarConReplaceChild()">Reemplazar con .replaceChild()</button>
+                <button onclick="eliminarConRemoveChild()">
+                    Eliminar con .removeChild()
+                </button>
+                <button onclick="reemplazarConReplaceChild()">
+                    Reemplazar con .replaceChild()
+                </button>
                 <button onclick="crearLosParrafos()">Crear Elementos</button>
-            
+
                 <div id="resultado-eliminar"></div>
             </section>
 
             <section id="manipular-clases">
                 <h2>Manipular Clases CSS</h2>
-                <div id="elemento-clase" class="caja">Elemento para manipular clases CSS</div>
-            
+                <div id="elemento-clase" class="caja">
+                    Elemento para manipular clases CSS
+                </div>
+
                 <button onclick="mostrarClassName()">Mostrar .className</button>
                 <button onclick="mostrarClassList()">Mostrar .classList</button>
                 <button onclick="agregarClases()">Agregar Clases</button>
                 <button onclick="quitarClases()">Quitar Clases</button>
                 <button onclick="verificarClase()">Verificar Clase</button>
                 <button onclick="cambiarClase()">Cambiar Clase</button>
-                <button onclick="alternarClaseCondicional()">Alternar Clase Condicional</button>
+                <button onclick="alternarClaseCondicional()">
+                    Alternar Clase Condicional
+                </button>
                 <button onclick="reemplazarClase()">Reemplazar Clase</button>
-            
+
                 <div id="resultado-clase"></div>
             </section>
-            
-            
-            
         </div>
     </main>
 
     <footer>
-        <p>Ian Miguel Soler</p>
+        <p>&copy; 2024 - Elementos Del DOM PDF TEMA 2-2 por Ian Miguel Soler</p>
     </footer>
 
     <script src="../JavaScript/funciones.js"></script>
 </body>
+
 </html>

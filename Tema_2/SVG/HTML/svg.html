@@ -1,419 +1,378 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Creación de Imágenes con SVG</title>
-    <link rel="stylesheet" href="../Estilos/estilos.css" />
-  </head>
 
-  <body>
-    <header>
-      <h1>Introducción a SVG en HTML5</h1>
-      <p>
-        SVG (Scalable Vector Graphics) es un formato para crear imágenes
-        vectoriales en dos dimensiones, compatible con HTML5 y otros entornos
-        web.
-      </p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creación de Imágenes con SVG</title>
+  <link rel="stylesheet" href="../Estilos/estilos.css" />
+</head>
 
-    <main>
-      <!-- Resumen sobre la etiqueta SVG -->
-      <section id="resumen-svg">
-        <details>
-          <summary>
-            <h2>La Etiqueta SVG</h2>
-          </summary>
-          <p>
-            SVG es una tecnología basada en XML que permite crear gráficos
-            vectoriales bidimensionales. A diferencia de
-            <code>&lt;canvas&gt;</code>, SVG es independiente de la resolución y
-            cada elemento gráfico pertenece al DOM, por lo que se puede
-            manipular con JavaScript o CSS.
-          </p>
-          <p>
-            SVG admite gráficos geométricos, imágenes bitmap y texto,
-            permitiendo agrupación, transformación y aplicación de estilos
-            comunes a los elementos.
-          </p>
-        </details>
-      </section>
+<body>
+  <header>
+    <h1>Introducción a SVG en HTML5</h1>
+    <p>
+      SVG (Scalable Vector Graphics) es un formato para crear imágenes
+      vectoriales en dos dimensiones, compatible con HTML5 y otros entornos
+      web.
+    </p>
+  </header>
 
-      <!-- Paso a Paso para Crear Imágenes con SVG -->
-      <section id="creacion-imagen-svg">
-        <details>
-          <summary>
-            <h2>Creación de una Imagen con SVG</h2>
-          </summary>
-          <p>
-            Para crear una imagen SVG, necesitamos definir un sistema de
-            coordenadas en el que el origen es la esquina superior izquierda.
-          </p>
-          <p>Podemos crear un documento SVG utilizando la estructura:</p>
-          <pre>
+  <main>
+    <!-- Resumen sobre la etiqueta SVG -->
+    <section id="resumen-svg">
+      <details>
+        <summary>
+          <h2>La Etiqueta SVG</h2>
+        </summary>
+        <p>
+          SVG es una tecnología basada en XML que permite crear gráficos
+          vectoriales bidimensionales. A diferencia de
+          <code>&lt;canvas&gt;</code>, SVG es independiente de la resolución y
+          cada elemento gráfico pertenece al DOM, por lo que se puede
+          manipular con JavaScript o CSS.
+        </p>
+        <p>
+          SVG admite gráficos geométricos, imágenes bitmap y texto,
+          permitiendo agrupación, transformación y aplicación de estilos
+          comunes a los elementos.
+        </p>
+      </details>
+    </section>
+
+    <!-- Paso a Paso para Crear Imágenes con SVG -->
+    <section id="creacion-imagen-svg">
+      <details>
+        <summary>
+          <h2>Creación de una Imagen con SVG</h2>
+        </summary>
+        <p>
+          Para crear una imagen SVG, necesitamos definir un sistema de
+          coordenadas en el que el origen es la esquina superior izquierda.
+        </p>
+        <p>Podemos crear un documento SVG utilizando la estructura:</p>
+        <pre>
 &lt;svg width="200" height="200"&gt;
   &lt;!-- Contenido de la imagen SVG --&gt;
 &lt;/svg&gt;
-    </pre
-          >
-          <p>
-            Este código puede ser insertado directamente en un documento HTML o
-            referenciado como una imagen externa con la etiqueta
-            <code>&lt;img&gt;</code> o <code>&lt;iframe&gt;</code>.
-          </p>
-        </details>
-      </section>
+    </pre>
+        <p>
+          Este código puede ser insertado directamente en un documento HTML o
+          referenciado como una imagen externa con la etiqueta
+          <code>&lt;img&gt;</code> o <code>&lt;iframe&gt;</code>.
+        </p>
+      </details>
+    </section>
 
-      <!-- Ejemplo de un Círculo en SVG -->
-      <section id="ejemplo-circle">
-        <details>
-          <summary>
-            <h2>Ejemplo de SVG en HTML5: Dibujando un Círculo</h2>
-          </summary>
-          <p>
-            El elemento <code>&lt;circle&gt;</code> se utiliza para dibujar un
-            círculo. A continuación se explican sus atributos principales:
-          </p>
-          <ul class="listaEstilos">
-            <li>
-              <strong><code>cx</code></strong> y <strong><code>cy</code></strong
-              >: Coordenadas x e y del centro del círculo. Si se omiten, el
-              centro estará en el origen (0, 0).
-            </li>
-            <li>
-              <strong><code>r</code></strong
-              >: Define el radio del círculo (ejemplo: 40px).
-            </li>
-            <li>
-              <strong><code>stroke</code></strong
-              >: Color del borde del círculo.
-            </li>
-            <li>
-              <strong><code>stroke-width</code></strong
-              >: Grosor del borde.
-            </li>
-            <li>
-              <strong><code>fill</code></strong
-              >: Color de relleno del círculo (ejemplo: #6AB150).
-            </li>
-          </ul>
-          <p>Ejemplo de código para crear un círculo:</p>
-          <pre>
+    <!-- Ejemplo de un Círculo en SVG -->
+    <section id="ejemplo-circle">
+      <details>
+        <summary>
+          <h2>Ejemplo de SVG en HTML5: Dibujando un Círculo</h2>
+        </summary>
+        <p>
+          El elemento <code>&lt;circle&gt;</code> se utiliza para dibujar un
+          círculo. A continuación se explican sus atributos principales:
+        </p>
+        <ul class="listaEstilos">
+          <li>
+            <strong><code>cx</code></strong> y <strong><code>cy</code></strong>: Coordenadas x e y del centro del
+            círculo. Si se omiten, el
+            centro estará en el origen (0, 0).
+          </li>
+          <li>
+            <strong><code>r</code></strong>: Define el radio del círculo (ejemplo: 40px).
+          </li>
+          <li>
+            <strong><code>stroke</code></strong>: Color del borde del círculo.
+          </li>
+          <li>
+            <strong><code>stroke-width</code></strong>: Grosor del borde.
+          </li>
+          <li>
+            <strong><code>fill</code></strong>: Color de relleno del círculo (ejemplo: #6AB150).
+          </li>
+        </ul>
+        <p>Ejemplo de código para crear un círculo:</p>
+        <pre>
 &lt;svg width="250" height="100"&gt;
   &lt;circle cx="125" cy="50" r="40" stroke="#030" stroke-width="4" fill="#6AB150" /&gt;
 &lt;/svg&gt;
-    </pre
-          >
-          <p>Resultado:</p>
-          <svg width="250" height="100">
-            <circle
-              cx="125"
-              cy="50"
-              r="40"
-              stroke="#030"
-              stroke-width="4"
-              fill="#6AB150"
-            ></circle>
-          </svg>
-        </details>
-      </section>
+    </pre>
+        <p>Resultado:</p>
+        <svg width="250" height="100">
+          <circle cx="125" cy="50" r="40" stroke="#030" stroke-width="4" fill="#6AB150"></circle>
+        </svg>
+      </details>
+    </section>
 
-      <!-- Rectángulo -->
-      <section>
-        <details>
-          <summary>
-            <h2>1. Rectángulo</h2>
-          </summary>
-          <svg width="400" height="100">
-            <rect
-              width="400"
-              height="100"
-              style="
+    <!-- Rectángulo -->
+    <section>
+      <details>
+        <summary>
+          <h2>1. Rectángulo</h2>
+        </summary>
+        <svg width="400" height="100">
+          <rect width="400" height="100" style="
                 fill: rgb(0, 0, 255);
                 stroke-width: 10;
                 stroke: rgb(0, 0, 0);
-              "
-            />
-          </svg>
-        </details>
-      </section>
+              " />
+        </svg>
+      </details>
+    </section>
 
-      <!-- Rectángulo con esquinas redondeadas -->
-      <section>
-        <details>
-          <summary>
-            <h2>2. Rectángulo con esquinas redondeadas</h2>
-          </summary>
-          <svg width="400" height="180">
-            <rect
-              x="50"
-              y="20"
-              rx="20"
-              ry="20"
-              width="150"
-              height="150"
-              style="fill: red; stroke: black; stroke-width: 5; opacity: 0.5"
-            />
-          </svg>
-        </details>
-      </section>
+    <!-- Rectángulo con esquinas redondeadas -->
+    <section>
+      <details>
+        <summary>
+          <h2>2. Rectángulo con esquinas redondeadas</h2>
+        </summary>
+        <svg width="400" height="180">
+          <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+            style="fill: red; stroke: black; stroke-width: 5; opacity: 0.5" />
+        </svg>
+      </details>
+    </section>
 
-      <!-- Elipse (SVG Logo) -->
-      <section>
-        <details>
-          <summary>
-            <h2>3. Elipse (SVG Logo)</h2>
-          </summary>
-          <svg height="130" width="500">
-            <defs>
-              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop
-                  offset="0%"
-                  style="stop-color: rgb(255, 255, 0); stop-opacity: 1"
-                />
-                <stop
-                  offset="100%"
-                  style="stop-color: rgb(255, 0, 0); stop-opacity: 1"
-                />
-              </linearGradient>
-            </defs>
-            <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
-            <text
-              fill="#ffffff"
-              font-size="45"
-              font-family="Verdana"
-              x="50"
-              y="86"
-            >
-              SVG
-            </text>
-          </svg>
-        </details>
-      </section>
+    <!-- Elipse (SVG Logo) -->
+    <section>
+      <details>
+        <summary>
+          <h2>3. Elipse (SVG Logo)</h2>
+        </summary>
+        <svg height="130" width="500">
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color: rgb(255, 255, 0); stop-opacity: 1" />
+              <stop offset="100%" style="stop-color: rgb(255, 0, 0); stop-opacity: 1" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+          <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">
+            SVG
+          </text>
+        </svg>
+      </details>
+    </section>
 
-      <!-- Polígono (estrella) -->
-      <section>
-        <details>
-          <summary>
-            <h2>4. Polígono (estrella)</h2>
-          </summary>
-          <svg width="300" height="200">
-            <polygon
-              points="100,10 40,198 190,78 10,78 160,198"
-              style="
+    <!-- Polígono (estrella) -->
+    <section>
+      <details>
+        <summary>
+          <h2>4. Polígono (estrella)</h2>
+        </summary>
+        <svg width="300" height="200">
+          <polygon points="100,10 40,198 190,78 10,78 160,198" style="
                 fill: lime;
                 stroke: purple;
                 stroke-width: 5;
                 fill-rule: evenodd;
-              "
-            />
-          </svg>
-        </details>
-      </section>
+              " />
+        </svg>
+      </details>
+    </section>
 
-      <!-- Polilínea -->
-      <section>
-        <details>
-          <summary>
-            <h2>5. Polilínea</h2>
-          </summary>
-          <svg width="250" height="150">
-            <polyline
-              points="125,10 175,130 75,130"
-              style="fill: #6ab150; stroke: #003300; stroke-width: 3"
-            />
-          </svg>
-        </details>
-      </section>
+    <!-- Polilínea -->
+    <section>
+      <details>
+        <summary>
+          <h2>5. Polilínea</h2>
+        </summary>
+        <svg width="250" height="150">
+          <polyline points="125,10 175,130 75,130" style="fill: #6ab150; stroke: #003300; stroke-width: 3" />
+        </svg>
+      </details>
+    </section>
 
-      <section>
-        <details>
-          <summary>
-            <h2>6. Atributos de Figuras SVG</h2>
-          </summary>
-          <table>
-            <thead>
-              <tr>
-                <th>Atributo</th>
-                <th>Descripción</th>
-                <th>Polyline</th>
-                <th>Polygon</th>
-                <th>Ellipse</th>
-                <th>LinearGradient</th>
-                <th>Rect</th>
-                <th>Circle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>cx</code></td>
-                <td>Coordenada x del centro</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✔️</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✔️</td>
-              </tr>
-              <tr>
-                <td><code>cy</code></td>
-                <td>Coordenada y del centro</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✔️</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✔️</td>
-              </tr>
-              <tr>
-                <td><code>r</code></td>
-                <td>Radio del círculo</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✔️</td>
-              </tr>
-              <tr>
-                <td><code>rx</code></td>
-                <td>
-                  Radio en el eje x (para elipses y rectángulos redondeados)
-                </td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✔️</td>
-                <td>✘</td>
-                <td>✔️</td>
-                <td>✘</td>
-              </tr>
-              <tr>
-                <td><code>ry</code></td>
-                <td>
-                  Radio en el eje y (para elipses y rectángulos redondeados)
-                </td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✔️</td>
-                <td>✘</td>
-                <td>✔️</td>
-                <td>✘</td>
-              </tr>
-              <tr>
-                <td><code>points</code></td>
-                <td>Lista de puntos para definir formas</td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✘</td>
-              </tr>
-              <tr>
-                <td><code>fill</code></td>
-                <td>Color de relleno</td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✘</td>
-                <td>✔️</td>
-                <td>✔️</td>
-              </tr>
-              <tr>
-                <td><code>stroke</code></td>
-                <td>Color del borde</td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✘</td>
-                <td>✔️</td>
-                <td>✔️</td>
-              </tr>
-              <tr>
-                <td><code>stroke-width</code></td>
-                <td>Grosor del borde</td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✘</td>
-                <td>✔️</td>
-                <td>✔️</td>
-              </tr>
-              <tr>
-                <td><code>x</code></td>
-                <td>Posición x del rectángulo o punto de inicio</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✔️</td>
-                <td>✘</td>
-              </tr>
-              <tr>
-                <td><code>y</code></td>
-                <td>Posición y del rectángulo o punto de inicio</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✔️</td>
-                <td>✘</td>
-              </tr>
-              <tr>
-                <td><code>width</code></td>
-                <td>Anchura del rectángulo o del lienzo</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✘</td>
-              </tr>
-              <tr>
-                <td><code>height</code></td>
-                <td>Altura del rectángulo o del lienzo</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✘</td>
-                <td>✔️</td>
-                <td>✔️</td>
-                <td>✘</td>
-              </tr>
-            </tbody>
-          </table>
-        </details>
-      </section>
+    <section>
+      <details>
+        <summary>
+          <h2>6. Atributos de Figuras SVG</h2>
+        </summary>
+        <table>
+          <thead>
+            <tr>
+              <th>Atributo</th>
+              <th>Descripción</th>
+              <th>Polyline</th>
+              <th>Polygon</th>
+              <th>Ellipse</th>
+              <th>LinearGradient</th>
+              <th>Rect</th>
+              <th>Circle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>cx</code></td>
+              <td>Coordenada x del centro</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✔️</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✔️</td>
+            </tr>
+            <tr>
+              <td><code>cy</code></td>
+              <td>Coordenada y del centro</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✔️</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✔️</td>
+            </tr>
+            <tr>
+              <td><code>r</code></td>
+              <td>Radio del círculo</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✔️</td>
+            </tr>
+            <tr>
+              <td><code>rx</code></td>
+              <td>
+                Radio en el eje x (para elipses y rectángulos redondeados)
+              </td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✔️</td>
+              <td>✘</td>
+              <td>✔️</td>
+              <td>✘</td>
+            </tr>
+            <tr>
+              <td><code>ry</code></td>
+              <td>
+                Radio en el eje y (para elipses y rectángulos redondeados)
+              </td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✔️</td>
+              <td>✘</td>
+              <td>✔️</td>
+              <td>✘</td>
+            </tr>
+            <tr>
+              <td><code>points</code></td>
+              <td>Lista de puntos para definir formas</td>
+              <td>✔️</td>
+              <td>✔️</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✘</td>
+            </tr>
+            <tr>
+              <td><code>fill</code></td>
+              <td>Color de relleno</td>
+              <td>✔️</td>
+              <td>✔️</td>
+              <td>✔️</td>
+              <td>✘</td>
+              <td>✔️</td>
+              <td>✔️</td>
+            </tr>
+            <tr>
+              <td><code>stroke</code></td>
+              <td>Color del borde</td>
+              <td>✔️</td>
+              <td>✔️</td>
+              <td>✔️</td>
+              <td>✘</td>
+              <td>✔️</td>
+              <td>✔️</td>
+            </tr>
+            <tr>
+              <td><code>stroke-width</code></td>
+              <td>Grosor del borde</td>
+              <td>✔️</td>
+              <td>✔️</td>
+              <td>✔️</td>
+              <td>✘</td>
+              <td>✔️</td>
+              <td>✔️</td>
+            </tr>
+            <tr>
+              <td><code>x</code></td>
+              <td>Posición x del rectángulo o punto de inicio</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✔️</td>
+              <td>✘</td>
+            </tr>
+            <tr>
+              <td><code>y</code></td>
+              <td>Posición y del rectángulo o punto de inicio</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✔️</td>
+              <td>✘</td>
+            </tr>
+            <tr>
+              <td><code>width</code></td>
+              <td>Anchura del rectángulo o del lienzo</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✔️</td>
+              <td>✔️</td>
+              <td>✘</td>
+            </tr>
+            <tr>
+              <td><code>height</code></td>
+              <td>Altura del rectángulo o del lienzo</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✘</td>
+              <td>✔️</td>
+              <td>✔️</td>
+              <td>✘</td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+    </section>
 
-      <!-- Sección sobre la etiqueta <defs> -->
-      <section id="defs-svg">
-        <details>
-          <summary>
-            <h2>Uso de la Etiqueta &lt;defs&gt;</h2>
-          </summary>
-          <p>
-            La etiqueta <code>&lt;defs&gt;</code> en SVG se utiliza para definir
-            elementos gráficos que no se muestran directamente en el lienzo,
-            sino que se almacenan para ser reutilizados en otras partes del SVG.
-            Esto es útil para definir gradientes, patrones, filtros, máscaras, y
-            otros elementos gráficos que pueden aplicarse mediante una
-            referencia.
-          </p>
-          <p>
-            Cuando defines un elemento dentro de <code>&lt;defs&gt;</code>,
-            necesitas asignarle un <code>id</code> que lo identifique. Luego,
-            puedes referenciar este elemento en otras partes del SVG usando
-            <code>url(#id)</code>.
-          </p>
+    <!-- Sección sobre la etiqueta <defs> -->
+    <section id="defs-svg">
+      <details>
+        <summary>
+          <h2>Uso de la Etiqueta &lt;defs&gt;</h2>
+        </summary>
+        <p>
+          La etiqueta <code>&lt;defs&gt;</code> en SVG se utiliza para definir
+          elementos gráficos que no se muestran directamente en el lienzo,
+          sino que se almacenan para ser reutilizados en otras partes del SVG.
+          Esto es útil para definir gradientes, patrones, filtros, máscaras, y
+          otros elementos gráficos que pueden aplicarse mediante una
+          referencia.
+        </p>
+        <p>
+          Cuando defines un elemento dentro de <code>&lt;defs&gt;</code>,
+          necesitas asignarle un <code>id</code> que lo identifique. Luego,
+          puedes referenciar este elemento en otras partes del SVG usando
+          <code>url(#id)</code>.
+        </p>
 
-          <h3>Ejemplo de Uso de &lt;defs&gt; con un Gradiente Lineal</h3>
-          <p>
-            En el siguiente ejemplo, el gradiente lineal se define dentro de
-            <code>&lt;defs&gt;</code> con el identificador
-            <code>miGradiente</code>. Luego, se aplica como relleno de un
-            rectángulo usando <code>fill="url(#miGradiente)"</code>.
-          </p>
+        <h3>Ejemplo de Uso de &lt;defs&gt; con un Gradiente Lineal</h3>
+        <p>
+          En el siguiente ejemplo, el gradiente lineal se define dentro de
+          <code>&lt;defs&gt;</code> con el identificador
+          <code>miGradiente</code>. Luego, se aplica como relleno de un
+          rectángulo usando <code>fill="url(#miGradiente)"</code>.
+        </p>
 
-          <pre>
+        <pre>
 &lt;svg width="200" height="200"&gt;
   &lt;defs&gt;
       &lt;linearGradient id="miGradiente" x1="0%" y1="0%" x2="100%" y2="0%"&gt;
@@ -423,104 +382,77 @@
   &lt;/defs&gt;
   &lt;rect x="10" y="10" width="180" height="180" fill="url(#miGradiente)" /&gt;
 &lt;/svg&gt;
-    </pre
-          >
+    </pre>
 
-          <p>Resultado:</p>
-          <svg width="200" height="200">
-            <defs>
-              <linearGradient
-                id="miGradiente"
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
-              >
-                <stop
-                  offset="0%"
-                  style="stop-color: blue; stop-opacity: 1"
-                ></stop>
-                <stop
-                  offset="100%"
-                  style="stop-color: red; stop-opacity: 1"
-                ></stop>
-              </linearGradient>
-            </defs>
-            <rect
-              x="10"
-              y="10"
-              width="180"
-              height="180"
-              fill="url(#miGradiente)"
-            ></rect>
-          </svg>
+        <p>Resultado:</p>
+        <svg width="200" height="200">
+          <defs>
+            <linearGradient id="miGradiente" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color: blue; stop-opacity: 1"></stop>
+              <stop offset="100%" style="stop-color: red; stop-opacity: 1"></stop>
+            </linearGradient>
+          </defs>
+          <rect x="10" y="10" width="180" height="180" fill="url(#miGradiente)"></rect>
+        </svg>
 
-          <p>
-            En este ejemplo, el rectángulo se rellena con el gradiente lineal
-            definido en <code>&lt;defs&gt;</code>, aplicando una transición de
-            color de azul a rojo.
-          </p>
-        </details>
-      </section>
+        <p>
+          En este ejemplo, el rectángulo se rellena con el gradiente lineal
+          definido en <code>&lt;defs&gt;</code>, aplicando una transición de
+          color de azul a rojo.
+        </p>
+      </details>
+    </section>
 
-      <!-- Línea SVG -->
-      <section>
-        <details>
-          <summary>
-            <h2>Ejemplo de Línea en SVG</h2>
-          </summary>
-          <p>
-            El elemento <code>&lt;line&gt;</code> se utiliza para dibujar una
-            línea recta entre dos puntos. Los atributos <code>x1</code> y
-            <code>y1</code> definen el punto de inicio, mientras que
-            <code>x2</code> y <code>y2</code> definen el punto final de la
-            línea. Puedes ajustar el color y el grosor de la línea con los
-            atributos <code>stroke</code> y <code>stroke-width</code>.
-          </p>
-          <p>Ejemplo de código:</p>
-          <pre>
+    <!-- Línea SVG -->
+    <section>
+      <details>
+        <summary>
+          <h2>Ejemplo de Línea en SVG</h2>
+        </summary>
+        <p>
+          El elemento <code>&lt;line&gt;</code> se utiliza para dibujar una
+          línea recta entre dos puntos. Los atributos <code>x1</code> y
+          <code>y1</code> definen el punto de inicio, mientras que
+          <code>x2</code> y <code>y2</code> definen el punto final de la
+          línea. Puedes ajustar el color y el grosor de la línea con los
+          atributos <code>stroke</code> y <code>stroke-width</code>.
+        </p>
+        <p>Ejemplo de código:</p>
+        <pre>
 &lt;svg width="200" height="100"&gt;
   &lt;line x1="10" y1="10" x2="190" y2="90" stroke="blue" stroke-width="4" /&gt;
 &lt;/svg&gt;
-    </pre
-          >
+    </pre>
 
-          <p>Resultado:</p>
-          <svg width="200" height="100">
-            <line
-              x1="10"
-              y1="10"
-              x2="190"
-              y2="90"
-              stroke="blue"
-              stroke-width="4"
-            ></line>
-          </svg>
-        </details>
-      </section>
+        <p>Resultado:</p>
+        <svg width="200" height="100">
+          <line x1="10" y1="10" x2="190" y2="90" stroke="blue" stroke-width="4"></line>
+        </svg>
+      </details>
+    </section>
 
-      <!-- Creación de Gradientes en SVG -->
-      <section id="gradientes-svg">
-        <details>
-          <summary>
-            <h2>8. Creación de Gradientes en SVG</h2>
-          </summary>
-          <p>
-            En SVG, podemos crear degradados de color lineales y radiales
-            utilizando los elementos <code>&lt;linearGradient&gt;</code> y
-            <code>&lt;radialGradient&gt;</code>, respectivamente. Los degradados
-            permiten una transición suave entre colores, útil para aplicar
-            efectos visuales atractivos.
-          </p>
+    <!-- Creación de Gradientes en SVG -->
+    <section id="gradientes-svg">
+      <details>
+        <summary>
+          <h2>8. Creación de Gradientes en SVG</h2>
+        </summary>
+        <p>
+          En SVG, podemos crear degradados de color lineales y radiales
+          utilizando los elementos <code>&lt;linearGradient&gt;</code> y
+          <code>&lt;radialGradient&gt;</code>, respectivamente. Los degradados
+          permiten una transición suave entre colores, útil para aplicar
+          efectos visuales atractivos.
+        </p>
 
-          <!-- Gradiente Lineal -->
-          <h3>Gradiente Lineal</h3>
-          <p>
-            El siguiente ejemplo muestra un degradado lineal con transiciones
-            entre varios colores usando el elemento
-            <code>&lt;linearGradient&gt;</code>:
-          </p>
-          <pre>
+        <!-- Gradiente Lineal -->
+        <h3>Gradiente Lineal</h3>
+        <p>
+          El siguiente ejemplo muestra un degradado lineal con transiciones
+          entre varios colores usando el elemento
+          <code>&lt;linearGradient&gt;</code>:
+        </p>
+        <pre>
 &lt;svg width="250" height="100"&gt;
   &lt;defs&gt;
       &lt;linearGradient id="linearGradient"&gt;
@@ -533,30 +465,29 @@
   &lt;/defs&gt;
   &lt;rect fill="url(#linearGradient)" width="250" height="100" /&gt;
 &lt;/svg&gt;
-    </pre
-          >
-          <p>Resultado:</p>
-          <svg width="250" height="100">
-            <defs>
-              <linearGradient id="linearGradient">
-                <stop offset="10%" stop-color="red"></stop>
-                <stop offset="30%" stop-color="blue"></stop>
-                <stop offset="50%" stop-color="green"></stop>
-                <stop offset="70%" stop-color="yellow"></stop>
-                <stop offset="90%" stop-color="red"></stop>
-              </linearGradient>
-            </defs>
-            <rect fill="url(#linearGradient)" width="250" height="100"></rect>
-          </svg>
+    </pre>
+        <p>Resultado:</p>
+        <svg width="250" height="100">
+          <defs>
+            <linearGradient id="linearGradient">
+              <stop offset="10%" stop-color="red"></stop>
+              <stop offset="30%" stop-color="blue"></stop>
+              <stop offset="50%" stop-color="green"></stop>
+              <stop offset="70%" stop-color="yellow"></stop>
+              <stop offset="90%" stop-color="red"></stop>
+            </linearGradient>
+          </defs>
+          <rect fill="url(#linearGradient)" width="250" height="100"></rect>
+        </svg>
 
-          <!-- Gradiente Radial -->
-          <h3>Gradiente Radial</h3>
-          <p>
-            El siguiente ejemplo muestra un degradado radial usando el elemento
-            <code>&lt;radialGradient&gt;</code>, donde el color cambia desde el
-            centro hacia el borde de la figura:
-          </p>
-          <pre>
+        <!-- Gradiente Radial -->
+        <h3>Gradiente Radial</h3>
+        <p>
+          El siguiente ejemplo muestra un degradado radial usando el elemento
+          <code>&lt;radialGradient&gt;</code>, donde el color cambia desde el
+          centro hacia el borde de la figura:
+        </p>
+        <pre>
 &lt;svg width="250" height="150"&gt;
   &lt;defs&gt;
       &lt;radialGradient id="radialGradient"&gt;
@@ -566,56 +497,55 @@
   &lt;/defs&gt;
   &lt;rect fill="url(#radialGradient)" width="250" height="150" /&gt;
 &lt;/svg&gt;
-    </pre
-          >
-          <p>Resultado:</p>
-          <svg width="250" height="150">
-            <defs>
-              <radialGradient id="radialGradient">
-                <stop offset="0%" stop-color="chartreuse"></stop>
-                <stop offset="100%" stop-color="#030"></stop>
-              </radialGradient>
-            </defs>
-            <rect fill="url(#radialGradient)" width="250" height="150"></rect>
-          </svg>
+    </pre>
+        <p>Resultado:</p>
+        <svg width="250" height="150">
+          <defs>
+            <radialGradient id="radialGradient">
+              <stop offset="0%" stop-color="chartreuse"></stop>
+              <stop offset="100%" stop-color="#030"></stop>
+            </radialGradient>
+          </defs>
+          <rect fill="url(#radialGradient)" width="250" height="150"></rect>
+        </svg>
 
-          <p>
-            En estos ejemplos, el atributo <code>offset</code> en
-            <code>&lt;stop&gt;</code> define la posición donde un color
-            específico comienza o termina en el gradiente. Los valores van de 0%
-            (inicio del gradiente) a 100% (final del gradiente).
-          </p>
-        </details>
-      </section>
+        <p>
+          En estos ejemplos, el atributo <code>offset</code> en
+          <code>&lt;stop&gt;</code> define la posición donde un color
+          específico comienza o termina en el gradiente. Los valores van de 0%
+          (inicio del gradiente) a 100% (final del gradiente).
+        </p>
+      </details>
+    </section>
 
-      <!-- Sección sobre Patrones de Relleno -->
-      <section id="patrones-relleno">
-        <details>
-          <summary>
-            <h2>9. Patrones de Relleno en SVG</h2>
-          </summary>
+    <!-- Sección sobre Patrones de Relleno -->
+    <section id="patrones-relleno">
+      <details>
+        <summary>
+          <h2>9. Patrones de Relleno en SVG</h2>
+        </summary>
 
-          <p>
-            En SVG, se pueden crear patrones de relleno personalizados
-            utilizando la etiqueta <code>&lt;pattern&gt;</code>. Esto permite
-            repetir una imagen o forma en un área específica, como el relleno de
-            un rectángulo o cualquier otra figura.
-          </p>
-          <p>
-            Los patrones de relleno se definen dentro de
-            <code>&lt;defs&gt;</code> y se les asigna un <code>id</code> para
-            ser referenciados. Luego, pueden aplicarse como relleno de otros
-            elementos mediante <code>fill="url(#id)"</code>.
-          </p>
+        <p>
+          En SVG, se pueden crear patrones de relleno personalizados
+          utilizando la etiqueta <code>&lt;pattern&gt;</code>. Esto permite
+          repetir una imagen o forma en un área específica, como el relleno de
+          un rectángulo o cualquier otra figura.
+        </p>
+        <p>
+          Los patrones de relleno se definen dentro de
+          <code>&lt;defs&gt;</code> y se les asigna un <code>id</code> para
+          ser referenciados. Luego, pueden aplicarse como relleno de otros
+          elementos mediante <code>fill="url(#id)"</code>.
+        </p>
 
-          <h3>Ejemplo de Patrón de Relleno con una Imagen</h3>
-          <p>
-            En el siguiente ejemplo, se define un patrón de relleno utilizando
-            una imagen dentro de <code>&lt;pattern&gt;</code>. Este patrón se
-            aplica luego al relleno de un rectángulo.
-          </p>
+        <h3>Ejemplo de Patrón de Relleno con una Imagen</h3>
+        <p>
+          En el siguiente ejemplo, se define un patrón de relleno utilizando
+          una imagen dentro de <code>&lt;pattern&gt;</code>. Este patrón se
+          aplica luego al relleno de un rectángulo.
+        </p>
 
-          <pre>
+        <pre>
 &lt;svg width="250" height="200"&gt;
   &lt;defs&gt;
       &lt;pattern id="imagenPatron" width="125" height="131" patternUnits="userSpaceOnUse"&gt;
@@ -624,36 +554,28 @@
   &lt;/defs&gt;
   &lt;rect width="250" height="200" fill="url(#imagenPatron)" /&gt;
 &lt;/svg&gt;
-  </pre
-          >
+  </pre>
 
-          <p>Resultado:</p>
-          <svg width="250" height="200">
-            <defs>
-              <pattern
-                id="imagenPatron"
-                width="125"
-                height="130"
-                patternUnits="userSpaceOnUse"
-              >
-                <image
-                  href="https://media.istockphoto.com/id/470153376/es/foto/conejillo-de-indias.jpg?s=612x612&w=0&k=20&c=v90BEaYK2XWyJHDr0DM6TrLTtu8gOaLcZKGtHeuG9Qk="
-                  width="125"
-                  height="131"
-                ></image>
-              </pattern>
-            </defs>
-            <rect width="250" height="200" fill="url(#imagenPatron)"></rect>
-          </svg>
+        <p>Resultado:</p>
+        <svg width="250" height="200">
+          <defs>
+            <pattern id="imagenPatron" width="125" height="130" patternUnits="userSpaceOnUse">
+              <image
+                href="https://media.istockphoto.com/id/470153376/es/foto/conejillo-de-indias.jpg?s=612x612&w=0&k=20&c=v90BEaYK2XWyJHDr0DM6TrLTtu8gOaLcZKGtHeuG9Qk="
+                width="125" height="131"></image>
+            </pattern>
+          </defs>
+          <rect width="250" height="200" fill="url(#imagenPatron)"></rect>
+        </svg>
 
-          <h3>Ejemplo de Patrón de Relleno con una Forma</h3>
-          <p>
-            A continuación se muestra un ejemplo en el que el patrón de relleno
-            está formado por elipses repetidas. Este patrón se aplica a un
-            rectángulo.
-          </p>
+        <h3>Ejemplo de Patrón de Relleno con una Forma</h3>
+        <p>
+          A continuación se muestra un ejemplo en el que el patrón de relleno
+          está formado por elipses repetidas. Este patrón se aplica a un
+          rectángulo.
+        </p>
 
-          <pre>
+        <pre>
           &lt;svg width="250" height="120"&gt;
             &lt;defs&gt;
                 &lt;pattern id="elipsePatron" x="5" y="0" width="40" height="20" patternUnits="userSpaceOnUse"&gt;
@@ -662,48 +584,32 @@
             &lt;/defs&gt;
             &lt;rect x="25" y="10" width="200" height="100" fill="url(#elipsePatron)" stroke="#f00" /&gt;
           &lt;/svg&gt;
-            </pre
-                    >
+            </pre>
 
-          <p>Resultado:</p>
-          <svg width="250" height="120">
-            <defs>
-              <pattern
-                id="elipsePatron"
-                x="5"
-                y="0"
-                width="40"
-                height="20"
-                patternUnits="userSpaceOnUse"
-              >
-                <ellipse
-                  cx="20"
-                  cy="10"
-                  rx="20"
-                  ry="10"
-                  fill="#6AB150"
-                ></ellipse>
-              </pattern>
-            </defs>
-            <rect
-              x="25"
-              y="10"
-              width="200"
-              height="100"
-              fill="url(#elipsePatron)"
-              stroke="#f00"
-            ></rect>
-          </svg>
+        <p>Resultado:</p>
+        <svg width="250" height="120">
+          <defs>
+            <pattern id="elipsePatron" x="5" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+              <ellipse cx="20" cy="10" rx="20" ry="10" fill="#6AB150"></ellipse>
+            </pattern>
+          </defs>
+          <rect x="25" y="10" width="200" height="100" fill="url(#elipsePatron)" stroke="#f00"></rect>
+        </svg>
 
-          <p>
-            En estos ejemplos, el atributo
-            <code>patternUnits="userSpaceOnUse"</code> define cómo se coordina
-            el patrón en el área de relleno. Además, podemos ajustar el tamaño y
-            posición de repetición con los atributos <code>width</code> y
-            <code>height</code> del patrón.
-          </p>
-        </details>
-      </section>
-    </main>
-  </body>
+        <p>
+          En estos ejemplos, el atributo
+          <code>patternUnits="userSpaceOnUse"</code> define cómo se coordina
+          el patrón en el área de relleno. Además, podemos ajustar el tamaño y
+          posición de repetición con los atributos <code>width</code> y
+          <code>height</code> del patrón.
+        </p>
+      </details>
+    </section>
+  </main>
+</body>
+
+<footer>
+  <p>&copy; 2024 - SVG PDF TEMA 2-3 por Ian Miguel Soler</p>
+</footer>
+
 </html>
