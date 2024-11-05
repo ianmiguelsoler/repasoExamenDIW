@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Estilos/estilos.css" />
+    <title>Prácticas con HTML</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title">
+          <div class="title-wrapper">
+            <h2 class="title-text">Blog Personal 2</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="menu">
+      <ul id="estilosNavegacion">
+        <li class="estilosNavegacionInteriorLI"><a href="index.html">Inicio</a></li>
+        <li class="estilosNavegacionInteriorLI"><a href="imagen.html">Imagen</a></li>
+        <li class="estilosNavegacionInteriorLI"><a href="formulario.html">Formularios</a></li>
+        <li class="estilosNavegacionInteriorLI"><a href="etiquetas.html">Etiquetas</a></li>
+        <li class="estilosNavegacionInteriorLI"><a href="blog.html">Blog Personal</a></li>
+        <li class="estilosNavegacionInteriorLI"><a href="blog_2.html">Blog 2 Ampliación</a></li>
+        <li class="estilosNavegacionInteriorLI"><a href="blog_3.html">Blog 3 Ampliación</a></li>
+      </ul>
+    </nav>
+
+    <main class="estilosMainBlog">
+      <section id="blog">
+        <h2 class="tituloBlog">Blog</h2>
+        <p>
+          Soy un apasionado del desarrollo web con un enfoque especial en la creación de interfaces interactivas y visualmente atractivas.
+          Durante mis estudios en Desarrollo de Aplicaciones Web (DAW), he adquirido un profundo conocimiento en lenguajes como HTML, CSS,
+          JavaScript y PHP, lo que me ha permitido llevar a cabo proyectos creativos y funcionales. Me gusta enfrentarme a retos complejos y
+          aprender continuamente sobre nuevas tecnologías y tendencias en el mundo del diseño y desarrollo web. Actualmente, estoy trabajando
+          en un proyecto de final de grado en el que combino mi interés por la tecnología y los videojuegos, creando experiencias interactivas 
+          y únicas para los usuarios. Fuera del código, disfruto del tiempo con mi cobaya Yuyu y me inspiro mucho en mi pareja, Mai, quien siempre 
+          me impulsa a alcanzar mis metas con creatividad y dedicación.
+        </p>
+      </section>
+
+      <section id="video">
+        <h2>Vídeos</h2>
+        <!-- Primer vídeo: se reproduce automáticamente y está silenciado -->
+        <video width="600" height="315" controls autoplay muted>
+          <source src="" type="video/mp4" class="video_mp4" />
+          <source src="" type="video/ogg" id="video_ogg" />
+          Your browser does not support the video tag.
+        </video>
+        <p>Este vídeo comenzará a reproducirse automáticamente cuando se cargue.</p>
+
+        <!-- Segundo vídeo: volumen desactivado -->
+        <video width="600" height="315" controls muted poster="https://img.freepik.com/vector-gratis/ilustracion-icono-vector-dibujos-animados-lindo-gato-sentado-concepto-icono-naturaleza-animal-aislado-premium-vector-estilo-dibujos-animados-plana_138676-4148.jpg">
+          <source src="" type="video/mp4" class="video_mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p>Este vídeo tiene el volumen desactivado y muestra una imagen mientras se carga.</p>
+      </section>
+
+
+      <section id="botonesAudios">
+        <h2>Botones para activar los 4 audios</h2>
+        <div id="estilosBotones">
+          <button onclick="audio(1)">¿Hay alguien en la puerta?</button>
+          <button onclick="audio(2)">¿La cobaya yuyu?</button>
+          <button onclick="audio(3)">¿Mai la cuyita?</button>
+          <button onclick="audio(4)">¿Mario el fontanero?</button>
+          <audio id="reproductorAudio" autoplay controls>
+          </audio>
+        </div>
+      </section>
+    </main>
+
+    <script src="../JavaScript/video.js"></script>
+  </body>
+</html>

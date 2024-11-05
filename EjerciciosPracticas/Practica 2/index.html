@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Estilos/estilos.css" />
+    <title>Prácticas de SVG</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title">
+          <div class="title-wrapper">
+            <h2 class="title-text">Prácticas de SVG 2</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <nav class="menu">
+      <ul id="estilosNavegacion">
+        <li class="estilosNavegacionInteriorLI"><a href="index.html">Inicio</a></li>
+      </ul>
+    </nav> -->
+
+
+    <main class="estilosMainIndex">
+      <section id="svgEjercicio3">
+        <h1>Ejercicio 3</h1>
+        <div style=" border-color: black; border-width: 5px; border-style: dashed;">
+          <p style="font-family: sans-serif; font-size: 20px; font-weight: bolder; padding: 10px;">3. Dibuja en SVG un círculo con un radio de 50 píxeles en las coordenadas (120, 150) con un borde
+            azul de 2 píxeles, un relleno de color azul más claro y una transparencia del 50%.</p>
+
+          <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" style=" margin: 10px; border-color: rgb(175, 175, 175); border-width: 5px; border-style: dashed;">
+            <circle cx="120" cy="150" r="50" stroke="blue" stroke-width="2" fill="lightblue" fill-opacity="0.5" />
+          </svg>  
+        </div>   
+      </section>
+
+      <section id="svgEjercicio4" style="padding-top: 20px;">
+        <h1>Ejercicio 4</h1>
+        <div style=" border-color: black; border-width: 5px; border-style: dashed;">
+          <p style="font-family: sans-serif; font-size: 20px; font-weight: bolder; padding: 10px;">4. Crea un gradiente similar al que aparece en la siguiente imagen:</p>
+        
+          <svg width="500" height="500" style=" margin: 10px; border-color: rgb(175, 175, 175); border-width: 5px; border-style: dashed;">
+            <defs>
+              <radialGradient id="radialGradient5" fx="0.8" fy="0.8">
+                <stop offset="0%" stop-color="#ff00ff"></stop>
+                <stop offset="100%" stop-color="#330000"></stop>
+              </radialGradient>
+            </defs>
+            <rect fill="url(#radialGradient5)" x="50" y="100" width="400" height="300"></rect>
+          </svg>
+        </div>   
+      </section>
+
+      <section id="svgEjercicio5" style="padding-top: 20px;">
+        <h1>Ejercicio 5</h1>
+        <div style=" border-color: black; border-width: 5px; border-style: dashed;">
+          <p style="font-family: sans-serif; font-size: 20px; font-weight: bolder; padding: 10px;">5. Dibuja en SVG un rectángulo cuyo ancho sea el doble que su alto, con un borde de un píxel y sin
+            relleno. A continuación, dibuja el mismo rectángulo con las esquinas redondeadas a 30 píxeles en los
+            dos ejes.</p>
+        
+          <svg width="500" height="500" style=" margin: 10px; border-color: rgb(175, 175, 175); border-width: 5px; border-style: dashed;">
+            <rect x="50" y="100" width="400" height="200" stroke="black" fill="none" stroke-width="1"/>
+            <rect x="80" y="130" width="400" height="200" stroke="black" fill="none" stroke-width="1" rx="30" ry="30"/>
+          </svg>
+        </div>   
+      </section>
+
+      <section id="svgEjercicio6" style="padding-top: 20px;">
+        <h1>Ejercicio 6</h1>
+        <div style=" border-color: black; border-width: 5px; border-style: dashed;">
+          <p style="font-family: sans-serif; font-size: 20px; font-weight: bolder; padding: 10px;">6. Dibuja en SVG un polígono regular cerrado de seis lados, donde el lado mida al menos 40 píxeles.</p>
+        
+          <svg width="200" height="200" style="margin: 10px; border: 1px solid black;">
+            <polygon points="
+              100,60
+              140,80
+              140,120
+              100,140
+              60,120
+              60,80"
+              style="fill:rgb(100, 200, 255);stroke:rgb(0, 0, 0);stroke-width:2" />
+          </svg>
+          
+        </div>   
+      </section>
+
+      <section id="svgEjercicio6" style="padding-top: 20px;">
+        <h1>Ejercicio 7</h1>
+        <div style=" border-color: black; border-width: 5px; border-style: dashed;">
+          <p style="font-family: sans-serif; font-size: 20px; font-weight: bolder; padding: 10px;">7. Dibuja en SVG dos figuras. Una de ellas con un patrón de imagen de relleno en su interior y la otra
+            con un patrón realizado con otro/s elemento/s de SVG de tu elección.</p>
+        
+            <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+              
+              <defs>
+                <pattern id="imagePattern" patternUnits="userSpaceOnUse" width="100" height="100">
+                  <image href="https://images.unsplash.com/photo-1663970206579-c157cba7edda?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9uZG8lMjBkZSUyMHBhbnRhbGxhJTIwcGFyYSUyMHBjfGVufDB8fDB8fHww" x="0" y="0" width="100" height="100" />
+                </pattern>
+              </defs>
+
+              <circle cx="200" cy="200" r="150" fill="url(#imagePattern)" />
+            </svg>
+            
+          
+        </div>   
+      </section>
+
+    </main>
+  </body>
+</html>

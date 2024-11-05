@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Estilos/estilos.css" />
+    <title>Prácticas con HTML</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title">
+          <div class="title-wrapper">
+            <h2 class="title-text">imagen</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="menu">
+        <ul id="estilosNavegacion">
+          <li class="estilosNavegacionInteriorLI"><a href="index.html">Inicio</a></li>
+          <li class="estilosNavegacionInteriorLI"><a href="imagen.html">Imagen</a></li>
+          <li class="estilosNavegacionInteriorLI"><a href="formulario.html">Formularios</a></li>
+          <li class="estilosNavegacionInteriorLI"><a href="etiquetas.html">Etiquetas</a></li>
+          <li class="estilosNavegacionInteriorLI"><a href="blog.html">Blog Personal</a></li>
+          <li class="estilosNavegacionInteriorLI"><a href="blog_2.html">Blog 2 Ampliación</a></li>
+          <li class="estilosNavegacionInteriorLI"><a href="blog_3.html">Blog 3 Ampliación</a></li>
+        </ul>
+      </nav>
+
+
+      <main class="estilosMainImagen">
+        <section id="sectionImagen">
+          <picture>
+            <source 
+              srcset="https://aguacatec.es/wp-content/uploads/2023/10/e5a978b8-6772-4c85-a50e-15581af7d483.png" 
+              media="(min-width: 800px)">
+            <source 
+              srcset="https://aguacatec.es/wp-content/uploads/2023/10/e5a978b8-6772-4c85-a50e-15581af7d483.png" 
+              media="(min-width: 400px)">
+            
+            <img 
+              src="https://aguacatec.es/wp-content/uploads/2023/10/e5a978b8-6772-4c85-a50e-15581af7d483.png" 
+              alt="Aguacate to guapo con gafas de sol" 
+              class="imagenAguacate" />
+            
+            <figcaption>
+              Esto es un aguacate con gafas muy chulas
+            </figcaption>
+          </picture>
+          
+          <div class="contenedorTextoImagen">
+            <p>
+              <strong>E</strong>l aguacate es una fruta tropical originaria de América Central,
+               conocida por su textura cremosa y su sabor suave. Rico en grasas
+                saludables, es un excelente aliado para la salud cardiovascular 
+                y el bienestar general. Su versatilidad lo hace ideal para platos 
+                tanto dulces como salados, desde guacamole hasta batidos. Además, 
+                es una fuente importante de vitaminas como la E y el potasio, 
+                contribuyendo al cuidado de la piel y los músculos.
+            </p>
+            <span>
+              <audio id="audio" src="../audio/toc-puerta 1.mp3" type="audio/mpeg" controls autoplay loop>
+                Tu navegador no soporta el elemento de audio.
+              </audio>
+            </span>
+          </div>
+        </section>
+      </main>
+  </body>
+</html>

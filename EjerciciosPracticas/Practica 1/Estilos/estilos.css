@@ -1,0 +1,259 @@
+/*!------------------------------Index HTML----------------------------*/
+body {
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Fuente más legible */
+}
+.estilosMainIndex{
+  padding: 10px;
+  background-color: rgb(245, 245, 245);
+  max-width: 30%; 
+  border-radius: 20px; 
+  padding-left: 5%; 
+  margin-left: 5%;
+  font-size: large;
+  margin: 0 auto;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+@media (min-width: 640px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.title-text {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.75rem;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .title-text {
+    font-size: 2.5rem;
+  }
+}
+
+/*? Menú de navegación */
+.menu {
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  max-width: 800px;
+}
+
+#estilosNavegacion {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.estilosNavegacionInteriorLI {
+  background-color: #f1f1f1;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: 700;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#estilosNavegacion a {
+  color: #333;
+  text-decoration: none;
+}
+
+.estilosNavegacionInteriorLI:hover {
+  background-color: #ff9933;
+}
+
+.estilosNavegacionInteriorLI:focus {
+  outline: 2px solid #333;
+}
+
+@media (max-width: 768px) {
+  #estilosNavegacion {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .estilosNavegacionInteriorLI {
+    margin: 10px 0;
+  }
+}
+
+
+/*!------------------------------Blog HTML----------------------------*/
+
+.estilosMainBlog {
+  padding: 10px;
+  background-color: rgb(245, 245, 245);
+  max-width: 50%; 
+  border-radius: 20px; 
+  font-size: large;
+  margin: 0 auto; /* Centra horizontalmente */
+  padding: 2%;
+}
+
+.tituloBlog{
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+
+
+
+/*!------------------------------Imagen HTML----------------------------*/
+
+.estilosMainImagen{
+  padding: 10px;
+  background-color: rgb(245, 245, 245);
+  max-width: 80%; 
+  border-radius: 20px; 
+  padding-left: 5%; 
+  margin-left: 5%;
+  font-size: large;
+  margin: 0 auto;
+}
+
+#sectionImagen{
+  display: flex;
+}
+.imagenAguacate{
+  width: 250px;
+  height: 300px;
+  border-radius: 20px;
+  padding: 1%;
+}
+
+.contenedorTextoImagen{
+  padding-left: 2%;
+}
+
+/*!------------------------------Etiquetas HTML----------------------------*/
+
+.estilosMainEtiquetas{
+  padding: 10px;
+  background-color: rgb(245, 245, 245);
+  max-width: 80%; 
+  border-radius: 20px; 
+  padding-left: 5%; 
+  margin-left: 5%;
+  font-size: large;
+  margin: 0 auto;
+}
+
+.textoDeColorAzul{
+  color: #428ae9;
+}
+
+
+/*!------------------------------Formulario HTML----------------------------*/
+
+.formularioEstilos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#urlFormulario{
+  width: 60%;
+}
+
+.usuarioEstilosFormulario {
+  font-weight: bolder;
+}
+
+fieldset {
+  padding: 10px;
+  border: 2px solid #ccc;
+}
+
+legend {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.estilosBotonFormulario{
+  width: 100%;        
+  padding: 10px; 
+  padding-top: 10%;
+  padding-bottom: 10%;     
+  font-size: 16px;    
+  background-color: #a8edea; 
+  font-weight: bolder;
+  color: rgb(0, 0, 0);    
+  border: none;     
+  border-radius: 5px;
+  cursor: pointer; 
+}
+
+.estilosBotonFormulario:hover {
+  background-color: #fed6e3;
+}
+
+
+/*!------------------------------Blog 2 Ampliación----------------------------*/
+
+#botonesAudios{
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  max-width: 800px;
+}
+
+#estilosBotones{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+/*!------------------------------Blog 3 Ampliación----------------------------*/
+
+#botonesVideo{
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 12px;
+  background-color: #5ae2c0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  max-width: 800px;
+}
+
+#estilosVideo{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+button{
+  border-radius: 20px;
+  background-color: #103937;
+  font-family: sans-serif;
+  font-weight: bolder;
+  color: white;
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Estilos/estilos.css" />
+    <title>Práctica 4 Ej: 1,5,6</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title">
+          <div class="title-wrapper">
+            <h2 class="title-text">Práctica 4 Ej: 1,5,6</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <main class="estilosMainIndex">
+      <section id="Ejercicio1">
+        <h1>Ejercicio 4</h1>
+        <p style="font-family: sans-serif; font-size: 20px; font-weight: bolder; padding: 10px;">1. Realiza dos imágenes como las indicadas en las figuras a continuación.</p>
+        <canvas id="arco" height="400" width="400">
+          Tu navegador no soporta la etiqueta canvas de HTML5.
+          </canvas>
+
+        <canvas id="rectangulos" width="400" height="400" >No tiene soporte para canvas</canvas>
+      </section>
+
+    
+
+    <section id="Ejercicio5" style="padding-top: 20px;">
+      <h1>Ejercicio 5: Fotografia de YUYU</h1>
+      <div style=" border-color: black; border-width: 5px; border-style: dashed;">
+        <p style="font-family: sans-serif; font-size: 20px; font-weight: bolder; padding: 10px;">5. Convierte una imagen de tu elección a color sepia modificando el color de cada uno de los píxeles
+          sabiendo que para ello hay que usar la fórmula indicada a continuación. Toma como base el ejemplo
+          donde se convierte la imagen a blanco y negro para trabajar con los colores de los píxeles.</p>
+      
+          <canvas id="imagen" width="600" height="680"></canvas>
+      </div>   
+    </section>
+    
+    <section id="Ejercicio6" style="padding-top: 20px;">
+      <h1>Ejercicio 6: Fotografia de YUYU</h1>
+      <div style=" border-color: black; border-width: 5px; border-style: dashed;">
+        <p style="font-family: sans-serif; font-size: 20px; font-weight: bolder; padding: 10px;">
+          6. Para crear animaciones o videojuegos en canvas seguiremos estos pasos:
+          <ol>
+            <li>   Dibujamos un gráfico en canvas. </li>
+            <li>   Borramos el canvas pasados unos milisegundos. </li> 
+            <li>   Vlivemos a pintar un gráfico con un ligero cambio. </li>
+            <li>  Borramos nuevamente el canvas pasados unos milisegundos. </li>
+            <li>  Seguimos el mismo proceso de los pasos anteriores. </li>
+          </ol>
+        </p>
+      
+        <canvas id="juegoCanvas" width="500" height="500"></canvas>        
+        </div>   
+    </section>
+
+  </main>
+  </body>
+  <script>
+    canvasArco =  document.getElementById('arco');
+    let ctxArco = canvasArco.getContext("2d");
+
+    // Circulo parte izquierda
+    ctxArco.beginPath();
+    ctxArco.arc(50, 50, 30, Math.PI, Math.PI/2, true);
+    ctxArco.lineWith = 10;
+    ctxArco.strokeStyle = "black";
+    ctxArco.stroke();
+
+    //Circulo de la derecha por la mitad
+    ctxArco.beginPath();
+    ctxArco.arc(150, 50, 30, Math.PI, Math.PI*180, true);
+    ctxArco.lineWith = 10;
+    ctxArco.strokeStyle = "black";
+    ctxArco.stroke();
+
+    //Circulo invertido con false abajo izquierda
+    ctxArco.beginPath();
+    ctxArco.arc(50, 150, 30, Math.PI, Math.PI/2, false);
+    ctxArco.lineWith = 10;
+    ctxArco.strokeStyle = "black";
+    ctxArco.stroke();
+
+    //Circulo mitad abajo a la derecha.
+    ctxArco.beginPath();
+    ctxArco.arc(150, 150, 30, Math.PI/180, Math.PI, true);
+    ctxArco.lineWith = 10;
+    ctxArco.strokeStyle = "black";
+    ctxArco.stroke();
+
+    canvasRectangulo = document.getElementById('rectangulos');
+    let ctxRec = canvasRectangulo.getContext("2d");
+
+    const colores = ["yellow","green","blue","red"];
+    let x = 10;
+    let y = 10;
+    let width = 100;
+    let height = 100;
+
+    colores.forEach(color =>{
+      ctxRec.beginPath();
+      ctxRec.rect(x,y,width,height);
+      ctxRec.lineWith = 1;
+      ctxRec.strokeStyle = color;
+      ctxRec.stroke();
+      ctxRec.closePath();
+
+      // Aumentar las coordenadas y el tamaño para crear el efecto desplazado y escalado
+      x += 15;
+      y += 10;
+    })
+
+    //Imagen canvas ejercicio 5.
+    var canvasImagen = document.getElementById('imagen');
+    var ctxImagen = canvasImagen.getContext("2d");
+    var img = new Image();
+    img.crossOrigin = "anonymous"; // Intenta cargar la imagen con CORS
+    img.src = 'https://i.postimg.cc/DzsMYk0q/79597e39-a88f-4314-b5dc-96a02b345001.jpg';
+
+    img.onload = function() {
+        // Dibuja la imagen en el canvas
+        ctxImagen.drawImage(img, 0, 0);
+
+        // Obtiene los datos de la imagen en el canvas
+        var imageData = ctxImagen.getImageData(0, 0, canvasImagen.width, canvasImagen.height);
+        var data = imageData.data;
+
+        // Recorre cada píxel y aplica las fórmulas con las condiciones
+        for (var i = 0; i < data.length; i += 4) {
+            var r = data[i];     // Valor R del píxel
+            var g = data[i + 1]; // Valor G del píxel
+            var b = data[i + 2]; // Valor B del píxel
+
+            // Calcula los nuevos valores tr, tg, tb
+            var tr = Math.trunc(0.393 * r + 0.769 * g + 0.189 * b);
+            var tg = Math.trunc(0.349 * r + 0.686 * g + 0.168 * b);
+            var tb = Math.trunc(0.272 * r + 0.534 * g + 0.131 * b);
+
+            // Aplica las condiciones para truncar los valores
+            data[i] = tr > 255 ? 255 : tr;       // Si tr > 255, R = 255, si no R = tr
+            data[i + 1] = tg > 255 ? 255 : tg;   // Si tg > 255, G = 255, si no G = tg
+            data[i + 2] = tb > 255 ? 255 : tb;   // Si tb > 255, B = 255, si no B = tb
+            // data[i + 3] es el valor Alpha, lo dejamos sin cambios
+        }
+
+        // Actualiza el canvas con los nuevos datos
+        ctxImagen.putImageData(imageData, 0, 0);
+    };
+
+
+
+
+
+    // Ejercicio 6 - Animación en canvas para videojuego
+
+    const canvas = document.getElementById("juegoCanvas");
+      let ctxJuego = canvas.getContext("2d");
+
+      // Posición y tamaño inicial del "jugador"
+      let x2 = canvas.width / 2;
+      let y2 = canvas.height / 2;
+      const size = 20;
+      let dx = size; // Desplazamiento en x
+      let dy = 0; // Desplazamiento en y
+      let paused = false; // Estado del juego
+
+      function dibujarJugador() {
+        // Limpiar el canvas
+        ctxJuego.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Dibujar jugador
+        ctxJuego.fillStyle = "green";
+        ctxJuego.fillRect(x2, y2, size, size);
+
+        // Mostrar mensaje de pausa
+        if (paused) {
+          ctxJuego.fillStyle = "rgba(0, 0, 0, 0.7)";
+          ctxJuego.fillRect(0, 0, canvas.width, canvas.height);
+          ctxJuego.fillStyle = "white";
+          ctxJuego.font = "24px Arial";
+          ctxJuego.textAlign = "center";
+          ctxJuego.fillText("Juego en pausa", canvas.width / 2, canvas.height / 2);
+        }
+      }
+
+      function actualizarPosicion() {
+        if (!paused) {
+          // Actualizar posición del jugador
+          x2 += dx;
+          y2 += dy;
+
+          // Borde del canvas: si el jugador sale del área, aparece en el lado opuesto
+          if (x2 >= canvas.width) x2 = 0;
+          if (x2 < 0) x2 = canvas.width - size;
+          if (y2 >= canvas.height) y2 = 0;
+          if (y2 < 0) y2 = canvas.height - size;
+        }
+
+        dibujarJugador(); // Redibujar el jugador
+        requestAnimationFrame(actualizarPosicion); // Llamar a la función de actualización
+      }
+
+      function manejarTecla(event) {
+        if (event.keyCode === 37 && dx === 0) { // Flecha izquierda
+          dx = -size;
+          dy = 0;
+        } else if (event.keyCode === 38 && dy === 0) { // Flecha arriba
+          dx = 0;
+          dy = -size;
+        } else if (event.keyCode === 39 && dx === 0) { // Flecha derecha
+          dx = size;
+          dy = 0;
+        } else if (event.keyCode === 40 && dy === 0) { // Flecha abajo
+          dx = 0;
+          dy = size;
+        } else if (event.keyCode === 80) { // Tecla P para pausar
+          paused = !paused;
+        }
+      }
+
+      document.addEventListener("keydown", manejarTecla);
+      actualizarPosicion(); // Iniciar la animación
+  </script>
+</html>

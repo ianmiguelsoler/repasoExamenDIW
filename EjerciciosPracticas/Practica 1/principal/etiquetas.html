@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Estilos/estilos.css" />
+    <title>Prácticas con HTML5</title>
+  </head>
+
+  <body>
+    <!-- Cabecera -->
+    <header>
+      <h1>Ejemplos de nuevas etiquetas en HTML5</h1>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="menu">
+      <ul id="estilosNavegacion">
+        <li class="estilosNavegacionInteriorLI"><a href="index.html">Inicio</a></li>
+        <li class="estilosNavegacionInteriorLI"><a href="imagen.html">Imagen</a></li>
+        <li class="estilosNavegacionInteriorLI"><a href="formulario.html">Formularios</a></li>
+        <li class="estilosNavegacionInteriorLI"><a href="etiquetas.html">Etiquetas</a></li>
+        <li class="estilosNavegacionInteriorLI"><a href="blog.html">Blog Personal</a></li>
+        <li class="estilosNavegacionInteriorLI"><a href="blog_2.html">Blog 2 Ampliación</a></li>
+        <li class="estilosNavegacionInteriorLI"><a href="blog_3.html">Blog 3 Ampliación</a></li>
+      </ul>
+    </nav>
+
+    <!-- Sección principal de contenido -->
+ <!-- Sección principal de contenido -->
+<main class="estilosMainEtiquetas">
+  <section>
+    <h2>&lt;article&gt; - <span class="textoDeColorAzul"> Ejemplo de artículo</span></h2>
+    <article>
+      <header>
+        <h3>Título del artículo</h3>
+        <p>Publicado el <time datetime="2024-10-05">5 de octubre de 2024</time></p>
+      </header>
+      <p>Este es el contenido de un artículo. Se utiliza para agrupar información que puede ser independiente del resto del contenido de la página.</p>
+      <footer>
+        <p>Autor: Juan Pérez</p>
+      </footer>
+    </article>
+  </section>
+
+  <section>
+    <h2>&lt;figure&gt; y &lt;figcaption&gt; - <span class="textoDeColorAzul">Ejemplo de imagen con pie</span></h2>
+    <figure>
+      <img class="imagenAguacate" src="https://aguacatec.es/wp-content/uploads/2023/10/e5a978b8-6772-4c85-a50e-15581af7d483.png" alt="Descripción de la imagen"/>
+      <figcaption>Agua Agua AguaCateeeee</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>&lt;mark&gt; - <span class="textoDeColorAzul">Resaltado de texto</span></h2>
+    <p>En este texto, la palabra <mark>importante</mark> está resaltada para llamar la atención del usuario.</p>
+  </section>
+
+  <section>
+    <h2>&lt;progress&gt; - <span class="textoDeColorAzul">Barra de progreso</span></h2>
+    <label for="progreso">Progreso de la tarea:</label>
+    <progress id="progreso" value="70" max="100">70%</progress>
+  </section>
+
+  <section>
+    <h2>&lt;time&gt; - <span class="textoDeColorAzul">Fecha y hora</span></h2>
+    <p>Este evento se celebrará el <time datetime="2024-12-01T18:00">1 de diciembre de 2024, a las 18:00</time>.</p>
+  </section>
+
+  <section>
+    <h2>&lt;output&gt; - <span class="textoDeColorAzul">Resultado de una operación</span></h2>
+    <form oninput="resultado.value=parseInt(a.value)+parseInt(b.value)">
+      <input type="number" id="a" name="a" value="5" /> + 
+      <input type="number" id="b" name="b" value="10" /> = 
+      <output name="resultado" for="a b">15</output>
+    </form>
+  </section>
+
+  <section>
+    <h2>&lt;details&gt; y &lt;summary&gt; - <span class="textoDeColorAzul">Detalles desplegables</span></h2>
+    <details>
+      <summary>Haz clic aquí para ver más detalles</summary>
+      <p>Esta es la información oculta que puedes desplegar usando el elemento <code>&lt;details&gt;</code> y <code>&lt;summary&gt;</code>.</p>
+    </details>
+  </section>
+
+  <!-- Nueva sección de etiquetas -->
+  <section>
+    <h2>&lt;s&gt; - <span class="textoDeColorAzul">Texto tachado</span></h2>
+    <p><s>Precio original: 19,99€</s> Precio actual: 9,99€</p>
+  </section>
+
+  <section>
+    <h2>&lt;ins&gt; y &lt;del&gt; - <span class="textoDeColorAzul">Inserciones y eliminaciones</span></h2>
+    <p><del>Reunión el Jueves</del> <ins>Reunión el Viernes</ins></p>
+  </section>
+
+  <section>
+    <h2>&lt;q&gt; - <span class="textoDeColorAzul">Cita corta</span></h2>
+    <p><q cite="https://www.ejemplo.com">Este es un ejemplo de una cita corta.</q></p>
+  </section>
+
+  <section>
+    <h2>&lt;abbr&gt; - <span class="textoDeColorAzul">Abreviatura</span></h2>
+    <p>La <abbr title="World Wide Web Consortium">W3C</abbr> es la organización que desarrolla estándares para la web.</p>
+  </section>
+
+  <section>
+    <h2>&lt;kbd&gt; - <span class="textoDeColorAzul">Entrada del teclado</span></h2>
+    <p>Para hacer una captura de pantalla, presiona <kbd>Shift</kbd> + <kbd>Cmd</kbd> + <kbd>4</kbd> en Mac.</p>
+  </section>
+</main>
+  </body>
+</html>

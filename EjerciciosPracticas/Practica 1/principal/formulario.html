@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Estilos/estilos.css" />
+    <title>Prácticas con HTML</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title">
+          <div class="title-wrapper">
+            <h2 class="title-text">Formulario</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="menu">
+        <ul id="estilosNavegacion">
+          <li class="estilosNavegacionInteriorLI"><a href="index.html">Inicio</a></li>
+          <li class="estilosNavegacionInteriorLI"><a href="imagen.html">Imagen</a></li>
+          <li class="estilosNavegacionInteriorLI"><a href="formulario.html">Formularios</a></li>
+          <li class="estilosNavegacionInteriorLI"><a href="etiquetas.html">Etiquetas</a></li>
+          <li class="estilosNavegacionInteriorLI"><a href="blog.html">Blog Personal</a></li>
+          <li class="estilosNavegacionInteriorLI"><a href="blog_2.html">Blog 2 Ampliación</a></li>
+          <li class="estilosNavegacionInteriorLI"><a href="blog_3.html">Blog 3 Ampliación</a></li>
+        </ul>
+      </nav>
+
+      <main class="estilosMainImagen">
+        <section id="sectionImagen">
+          <form method="post" class="formularioEstilos">
+           <fieldset>
+              <legend>Usuario</legend>
+              <div class="usuarioEstilosFormulario">
+                <p>Nombre: <input type="text" required></p>
+                <p>Correo Electrónico: <input type="email" required></p>
+                <p>Fecha y Hora de Nacimiento: <input type="datetime"></p>
+                <p>Teléfono: <input type="tel" pattern="[0-9]{9}" placeholder="[XXX-XXX-XXX]"></p>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Tiempo</legend>
+              <div class="usuarioEstilosFormulario">
+                <p>URL: <input type="text" placeholder="Escribe la Url de tu página web personal" id="urlFormulario"></p>
+                <p>Fecha: <input type="date" id="fecha"></p> 
+                  <button id="fechaActual" onclick="fechaTiempo('date'); event.preventDefault();">Poner fecha actual</button>
+                <p>Tiempo: <input type="time" id="tiempo"></p> 
+                  <button id="tiempoActual" onclick="fechaTiempo('time'); event.preventDefault();">Poner hora actual</button>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Otros</legend>
+              <div class="usuarioEstilosFormulario">
+                <p>Mes: <input type="month" ></p>
+                <p>Semana: <input type="week"></p>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Números</legend>
+              <div class="usuarioEstilosFormulario">
+                <p>Número (min -10, max 10): <input type="number" min="-10" max="10"></p>
+                <p>Intervalo (min 0, max 10): 
+                  <label for="intervalo">Selecciona el valor:</label>
+                  <input type="range" id="intervalo" min="0" max="10" step="1" value="5">
+                  <output id="output-intervalo"></output>
+                </p>                
+              </div>
+            </fieldset>
+          
+            <fieldset>
+              <legend>Enviar</legend>
+              <div>
+                <input type="submit" class="estilosBotonFormulario">
+              </div>
+            </fieldset>
+          </form>
+        </section>
+      </main>
+      <script>
+        // Obtener el input de intervalo y el output para mostrar el valor
+        const intervalo = document.querySelector('#intervalo');
+        const output = document.querySelector('#output-intervalo');
+        
+        // Mostrar el valor inicial del rango cuando se carga la página
+        output.textContent = intervalo.value;
+      
+        // Actualizar el valor del output cuando el usuario cambie el rango
+        intervalo.addEventListener('input', function() {
+          output.textContent = intervalo.value;
+        });
+
+        const fechaTiempo = (input) => {
+          const fechaInput = document.querySelector('#fecha');
+          const tiempoInput = document.querySelector('#tiempo');
+          
+          // Obtener la fecha y hora actual del sistema.
+          const ahora = new Date();
+
+          if (input === 'date') {
+            // Formatear la fecha en formato yyyy-mm-dd.
+            const year = ahora.getFullYear();
+            const month = String(ahora.getMonth() + 1).padStart(2, '0'); // Los meses comienzan desde 0.
+            const day = String(ahora.getDate()).padStart(2, '0');
+            
+            // Asignar la fecha al input de fecha.
+            fechaInput.value = `${year}-${month}-${day}`;
+          } else if (input === 'time') {
+            // Formatear la hora en formato hh:mm.
+            const hours = String(ahora.getHours()).padStart(2, '0');
+            const minutes = String(ahora.getMinutes()).padStart(2, '0');
+            
+            // Asignar la hora al input de tiempo.
+            tiempoInput.value = `${hours}:${minutes}`;
+          }
+        };
+      </script>
+      
+  </body>
+  
+</html>

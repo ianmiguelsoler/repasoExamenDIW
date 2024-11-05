@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head><!-- se añade una etiqueta head para la cabecera -->
+<!-- Especifica el tipo de contenido y el juego de caracteres utilizado, en este caso UTF-8, lo que asegura que la página web pueda mostrar correctamente todos los caracteres especiales y símbolos. --> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<!-- Define el título de la página web que se mostrará en la pestaña del navegador o como nombre del marcador cuando se guarde la página. -->
+  <title>Ejemplo de estructura de capítulos en HTML5</title>
+  <link rel="stylesheet" href="Estilos/estilos.css" />
+</head>
+
+<body>
+  <header><!-- Se añade una etiqueta header. -->
+    <!-- Se añade una etiqueta h1 que pondrá el texto en un tamaño de título grande -->
+    <h1>Ejemplo de estructura de capítulos en HTML5</h1>
+    <!-- Se añade una etiqueta h2 que pondrá el texto en un tamaño de subtitulo -->
+    <h2>Presentación en HTML5</h2>
+  </header>
+  <nav><!-- Se añade una etiqueta nav que se utiliza para la navegación de la prágina -->
+    <dl> <!-- Define una lista de definiciones (description list), que se utiliza para listar términos y sus descripciones asociadas. -->
+      <dt><a href="#cap1">Capítulo I</a> :</dt> <!-- Define un término dentro de una lista de definiciones, en este caso un enlace al "Capítulo I".También contiene un enlace dentro que te lleva de manera interna en la web al ID -->
+      <dd>la mañana</dd><!-- Define la descripción de un término en una lista de definiciones, en este caso "la mañana" como descripción del término anterior. -->
+      <dt><a href="#cap1">Capítulo II</a> :</dt>
+      <dd>la tarde</dd>
+      <dt><a href="#cap1">Capítulo III</a> :</dt>
+      <dd>la noche</dd>
+    </dl>
+  </nav>
+  <!-- Abre una sección en la página para ordenar mejor la página y le añade un id para despues redirigirte con el enlace del nav directamente a ese sitio-->
+  <section id="cap1">
+    <h1>Capítulo I</h1>
+    <!-- Se añade un párrafo, que te añade un cambio de línea -->
+    <p>Hoy sale el sol, el comienzo de una nueva aventura, la de
+      la vida durante un día.</p>
+  </section>
+  <section id="cap2">
+    <h1>Capítulo II</h1>
+    <p>Ahora viene la noche, al final de esta extraordinaria
+      aventura que ha tenido lugar hoy.</p>
+  </section>
+  <section id="cap3">
+    <h1>Capítulo III</h1>
+    <p>En el corazón de la noche los espíritus están descansando,
+      preparando una nueva experiencia de vida, que tendrá lugar
+      mañana. ¡No
+       <strong>    <!-- Añade una etiqueta strong que pone el texto en negrita, además esta opción ya esta deprecated. -->
+        vivas sin la alegría de un nuevo proyecto!
+      </strong>
+    </p>
+   
+  </section>
+  <!-- Se añade el footer que te permite añadir cosas al final de la página -->
+  <footer>
+    <p>
+      <!-- Este enlace te redirige a una web que comprueba si el html es válido -->
+      <a href="http://validator.w3.org/check?uri=referer">
+        ¡Página xHTML válida!
+      </a>
+    </p>
+  </footer>
+</body>
+
+</html>
