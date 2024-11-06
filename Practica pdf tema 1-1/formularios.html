@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estilosFormulario.css" />
+</head>
+<body>
+    <form method="post" >
+        <fieldset>
+            <legend><h1>Datos Personales</h1></legend>
+             <label>Nombre Completo</label>
+             <input type="text" placeholder="Ian Miguel Sler" alt="UwU" >
+
+             <label>Fecha de nacimiento</label>
+             <input type="date">
+
+             <label>Correo electrónico</label>
+             <input type="email">
+
+             <label>Número de telefono</label>
+             <input type="tel">
+        </fieldset>
+
+        <fieldset>
+            <legend><h1>Preferencias de la cuenta</h1></legend>
+            <label> Color Preferido</label>
+            <input type="color">
+
+            <label>Rango de edad entre 18 y 60 años</label>
+            <input type="range" min="18" max="60">
+
+            <label>Dirección web personal</label>
+            <input type="url">
+
+            <label>Selección de archivos</label>
+            <input type="file">
+
+            <label>Selecciona lo que tu quieras:</label>
+            <input list="promocion">
+        </fieldset>
+
+        <fieldset>
+            <legend><h1>Configuración notificaciones</h1></legend>
+            <label>Activar o desactivar las notificaciones</label>
+            <input type="checkbox">
+            <input type="radio">
+            <select>
+                <optgroup label="Promocionales"></optgroup>
+                <option value="De lo que sea">123</option>
+                <option value="De l23">32</option>
+                <option value="2">qadwqad</option>
+                <option value="DS">asdsad</option>
+                <optgroup label="Informativas"></optgroup>
+                <option value="No me importa">asdasda</option>
+                <option value="No me importa">adasdas</option>
+                <option value="No me importa">dshyr234</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend><h1>Controles de formulario</h1></legend>
+            <input type="submit">
+            <input type="reset">
+        </fieldset>
+       <datalist id="promocion">
+            <option value="Opcion 1">Opcion 1</option>
+            <option value="Opcion 2">Opcion 2</option>
+            <option value="Opcion 3">Opcion 3</option>
+            <option value="Opcion 4">Opcion 4</option>
+            <option value="No me importa">asdasda</option>
+            <option value="No me importa">adasdas</option>
+            <option value="No me importa">dshyr234</option>
+       </datalist>
+    </form>
+</body>
+</html>
