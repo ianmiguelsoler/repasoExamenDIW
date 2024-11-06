@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Encabezado</h1>
+        <nav>
+            <ol>
+                <li>
+                    <a>Enlace 1</a>
+                </li>
+            </ol>
+        </nav>
+    </header>
+    <main>
+        <section id="secccionAgregar">
+            <p></p>
+            <video id="videoScript" controls poster="https://www.w3schools.com/tags/img_pink_flowers.jpg">
+                <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+                No admite tu navegador el video
+            </video>
+            <button onclick="adelantar()">Botón para adelantar 5 segundos</button>
+            <input type="button" value="Mutear" onclick="mutear()">
+            <button onclick="bajarVolumen()">Bajar el volumen</button>
+        </section>
+        <button onclick="agregarFinal()">Añadir beforeEnd</button>
+    </main>
+    <script>
+        const video = document.getElementById("videoScript");
+
+        const adelantar = () => {
+            video.currentTime += 5;
+        };
+        
+        const mutear = () => {
+            video.muted = true;
+        };
+
+        const bajarVolumen = () => {
+            if(video.volume > 0){
+                video.volume = Math.max(parseFloat(video.volume)-0.1,0)
+            }
+        };
+
+        const agregarFinal = () => {
+            const section = document.getElementById("secccionAgregar");
+            const referencia = section.querySelector("p");
+            const parrafo1 = document.createElement("p");
+            parrafo1.innerHTML = "<span>holaaaa</span>";
+
+            section.insertBefore(parrafo1, referencia);
+        };
+
+        
+
+
+    </script>
+</body>
+</html>
