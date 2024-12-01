@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de CSS</title>
+    <style>
+        /* Hojas de estilo internas */
+        p.internal-style {
+            color: blue;
+            font-size: 18px;
+        }
+
+        /* Modelo de cajas */
+        div.box {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid red;
+        }
+
+        /* Selectores */
+        p.selector {
+            color: purple;
+        }
+
+        .class-selector {
+            color: orange;
+        }
+
+        #id-selector {
+            color: teal;
+        }
+
+        /* Pseudoclases */
+        a:link {
+            color: red;
+        }
+        a:hover {
+            color: green;
+        }
+
+        /* Pseudoelementos */
+        p::first-letter {
+            font-size: 24px;
+            color: blue;
+        }
+
+        /* Selectores de atributos */
+        a[href^="http"] {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplos de CSS en un solo archivo</h1>
+
+    <!-- Estilos en línea -->
+    <section>
+        <h2>1. Estilos en línea</h2>
+        <p style="color: red; font-size: 20px;">Este es un párrafo con estilos en línea.</p>
+    </section>
+
+    <!-- Hojas de estilo internas -->
+    <section>
+        <h2>2. Hojas de estilo internas</h2>
+        <p class="internal-style">Este es un párrafo con una hoja de estilo interna.</p>
+    </section>
+
+    <!-- Modelo de cajas -->
+    <section>
+        <h2>3. Modelo de cajas</h2>
+        <div class="box">Contenido con padding, margen y borde.</div>
+    </section>
+
+    <!-- Selectores -->
+    <section>
+        <h2>4. Selectores</h2>
+        <p class="selector">Párrafo con selector de elemento.</p>
+        <p class="class-selector">Párrafo con selector de clase.</p>
+        <p id="id-selector">Párrafo con selector de ID.</p>
+    </section>
+
+    <!-- Pseudoclases -->
+    <section>
+        <h2>5. Pseudoclases</h2>
+        <a href="#">Enlace con pseudoclases (hover para ver el cambio).</a>
+    </section>
+
+    <!-- Pseudoelementos -->
+    <section>
+        <h2>6. Pseudoelementos</h2>
+        <p>Párrafo con <span>::first-letter</span> aplicado.</p>
+    </section>
+
+    <!-- Selectores de atributos -->
+    <section>
+        <h2>7. Selectores de atributos</h2>
+        <a href="http://example.com">Enlace externo con selector de atributo.</a>
+    </section>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Posicionamiento */
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.static, .relative, .absolute, .fixed {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: white;
+    margin: 10px;
+    line-height: 100px;
+}
+
+.static { background-color: #666; }
+.relative { background-color: #007bff; position: relative; top: 20px; left: 20px; }
+.absolute { background-color: #28a745; position: absolute; top: 50px; left: 50px; }
+.fixed { background-color: #dc3545; position: fixed; bottom: 10px; right: 10px; }
+
+/* Flotantes */
+.float-left {
+    float: left;
+    margin: 10px;
+}
+
+.clear {
+    clear: both;
+    background-color: #ddd;
+    padding: 10px;
+}
+
+/* Display y Visibility */
+#visibility-example {
+    background-color: #ffc107;
+    padding: 10px;
+    visibility: visible;
+}
+
+/* Overflow */
+.overflow-example {
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    overflow: scroll;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Modelo de caja */
+.content-box, .border-box {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 20px;
+    border: 10px solid #007bff;
+    background-color: #ddd;
+}
+
+.content-box {
+    box-sizing: content-box;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+/* Resize */
+.resizable {
+    width: 300px;
+    height: 100px;
+    resize: both;
+    overflow: auto;
+}

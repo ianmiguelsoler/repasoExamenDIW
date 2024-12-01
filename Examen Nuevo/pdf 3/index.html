@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Interactivo - Posicionamiento CSS</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Ejemplo Interactivo - Posicionamiento y Visualización en CSS</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Posicionamiento</h2>
+            <div class="contenedor">
+                <div class="static">Estático</div>
+                <div class="relative">Relativo</div>
+                <div class="absolute">Absoluto</div>
+                <div class="fixed">Fijo</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Elementos Flotantes</h2>
+            <div id="flotar">
+                <img src="https://via.placeholder.com/150" alt="Ejemplo Flotante" class="float-left">
+                <p>Este texto rodea la imagen flotada a la izquierda. La propiedad `float` ayuda a diseñar layouts complejos.</p>
+            </div>
+            <div class="clear">Elemento con clear aplicado.</div>
+        </section>
+
+        <section>
+            <h2>3. Propiedades de Visualización</h2>
+            <button id="toggle-visibility">Ocultar/Mostrar Elemento</button>
+            <div id="visibility-example">
+                <p>Este es un ejemplo de visibilidad.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Overflow</h2>
+            <div class="overflow-example">
+                Este es un contenido muy largo que supera el área asignada. Con la propiedad overflow puedes decidir si mostrar barras de desplazamiento o cortar el contenido.
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Modelo de Caja</h2>
+            <div class="content-box">Content-box: Incluye solo el contenido en el ancho.</div>
+            <div class="border-box">Border-box: Incluye bordes y rellenos en el ancho.</div>
+        </section>
+
+        <section>
+            <h2>6. Resize</h2>
+            <textarea class="resizable">Prueba redimensionar este área.</textarea>
+        </section>
+    </main>
+
+    <footer>
+        <p>Ejemplo creado para demostrar propiedades de posicionamiento y visualización en CSS.</p>
+    </footer>
+
+    <script>
+        // Interactividad para cambiar visibilidad
+        const toggleButton = document.getElementById('toggle-visibility');
+        const visibilityExample = document.getElementById('visibility-example');
+
+        toggleButton.addEventListener('click', () => {
+            if (visibilityExample.style.visibility === 'hidden') {
+                visibilityExample.style.visibility = 'visible';
+            } else {
+                visibilityExample.style.visibility = 'hidden';
+            }
+        });
+    </script>
+</body>
+</html>
