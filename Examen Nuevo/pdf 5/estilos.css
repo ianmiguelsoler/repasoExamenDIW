@@ -1,0 +1,50 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Contenedor Flex */
+.flex-container {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Ejemplo de flex-direction */
+.direction-example {
+    flex-direction: row;
+}
+
+/* Ejemplo de justify-content */
+.justify-example {
+    justify-content: space-between;
+}
+
+/* Ejemplo de align-items */
+.align-items-example {
+    align-items: stretch;
+    height: 100px;
+}
+
+/* Ítems Flex */
+.flex-item {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
