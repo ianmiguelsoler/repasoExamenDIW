@@ -2,8 +2,34 @@
 <html>
   <head>
   <title>Prueba de pseudoclases de estado</title>
-
+<style>
+	 /* Estado indeterminado */
+	 input:indeterminate {
+		background-color: lightblue;
+		border: 2px solid blue;
+	  }
+  
+	  /* Elementos seleccionados o marcados */
+	  input:checked {
+		background-color: lightgreen;
+		border: 2px solid green;
+	  }
+  
+	  /* Elementos activos */
+	  input:active {
+		background-color: yellow;
+		border: 2px solid orange;
+	  }
+  
+	  /* Elementos inactivos */
+	  input:disabled {
+		background-color: lightgray;
+		border: 2px dashed gray;
+		cursor: not-allowed;
+	  }
+</style>
 </head>
+
 <body>
     <h1>Prueba de pseudoclases de estado</h1>
     <form action="">

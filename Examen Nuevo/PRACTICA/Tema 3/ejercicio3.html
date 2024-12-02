@@ -3,14 +3,26 @@
   <head>
   <title>Ejemplo de estilos en citas</title>
 </head>
+<style>
+     #wind, #build{
+          background-color: #FFCCCC;
+     }
+     td:empty{
+          border: 1px solid red;
+
+     }
+     td:empty::before {
+          content: "x";
+     }
+</style>
 <body>
-<h1>Verbos irregulares en inglés : lista completa</h1>	
+<h1>Verbos irregulares en inglï¿½s : lista completa</h1>	
 
   <p></p>
   <p>Ir al <a href="#wind">verbo <q>wind</q></a></p>
   <p>Ir al <a href="#build">verbo <q>build</q></a></p>
   
-<table summary="Verbos irregulares en inglés - lista completa">
+<table summary="Verbos irregulares en inglï¿½s - lista completa">
   <thead>
     <tr>
      <th>Infinitivo</th>

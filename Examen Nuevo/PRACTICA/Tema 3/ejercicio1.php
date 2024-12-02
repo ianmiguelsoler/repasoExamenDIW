@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Aplicación de estilos CSS</title>
+  <title>Aplicaciï¿½n de estilos CSS</title>
   <style>
 	* { font-family: Verdana, Arial, sans-serif; }
     table, td, th { border: solid 1px black; }
  
+    th{
+      color:white;
+      background-color: #663333;
+    }
+	th:nth-of-type(2),td:nth-of-type(2){
+		color: red;
+	}
+	/* Periodicidad de colores cada seis filas */
+
+  tr:nth-child(6n+1) td, 
+  tr:nth-child(6n+3) td, 
+  tr:nth-child(6n+2) td{
+      background-color: #FFCCCC;
+  }
+  tr:nth-child(6n+4) td {
+      background-color: #FFFFCC;
+  }
+  tr:nth-child(6n+5) td {
+      background-color: #CCFFCC;
+  }
+  tr:nth-child(6n) td {
+      background-color: #CCFFFF;
+  }
   </style>
 </head>
 <body>
