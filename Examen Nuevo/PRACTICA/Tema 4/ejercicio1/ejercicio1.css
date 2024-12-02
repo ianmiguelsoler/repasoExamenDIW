@@ -2,20 +2,57 @@
 /* Style Sheet for Jaberwocky Tutorial */
 
 /* Body */
-body {background-color: tan}
+body {
+    background-color: tan;
+    background-image: url("./jabber2.gif");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
 
 /* Headers */
-h1 {color:maroon; font-size:20pt}
+h1 {
+    color: maroon;
+    font-size: 20pt;
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    border-style: groove double;
+    border-color: blue;
+    border-width: 10px;
+    text-align: center;
+    margin-left: 500px;
+    background-image: url("backtile.gif");
+}
+h2{
+background-color: rgb(230, 134, 8);
+}
 
 /* HR (Hard Rule = line) */
-hr {color:navy}
+hr {
+    color:navy;
+    height: 10px;
+    
+}
 
 /* Paragraphs */
 p {font-size:12pt; margin-left: 15px}
 p.verse {color:maroon; margin-left: 60px}
+p:nth-last-of-type(-n+5) {
+    /* Estilos que quieras aplicar */
+    color: red;
+    font-weight: bold;
+}
+p .comment{
+    color: aquamarine;
+}
 
 /* Divs */
-
+div.reference
+{
+color: slategray;
+margin-left: 40px;
+}
 /* Links */
 a:link     {color:green}
 a:visited  {color:yellow}
