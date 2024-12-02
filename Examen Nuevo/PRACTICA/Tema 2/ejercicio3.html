@@ -4,6 +4,25 @@
     <title>Result</title>
     <link rel="stylesheet" href="ejercicio3.css" />
 </head>
+<style>
+    div{
+        margin: 15px;
+        padding: 20px;
+    }
+    #one{
+        border: 1px solid black;
+    }
+    #two{
+        border: 1px dotted #555555;
+    }
+    #three{
+        border: 1px dashed #CCCCCC; /*Se superpone una con otras ya que tiene un margen las otras y esta vuelve a su sitio*/
+        margin: -20px;
+    }
+    span{
+        border: 1px solid #FF0000; /*Que el span a ser un elemento de linea y no de caja el borde no llega de lado a lado de la página*/
+    }
+</style>
 <body>
 
 <div id="one">
@@ -14,6 +33,8 @@
     Our second div, <span>with</span> <span>spans</span>!
 </div>
 
-
+<div id="three">
+    Hola me llamo jesus cristo
+</div>
 </body>
 </html>

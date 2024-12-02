@@ -9,11 +9,21 @@
     background: #FFFF66;
     padding: 10px;
 }
+/* #navbar {
+    position: absolute;
+    top: 58%;
+    left: 0; */
+    /*width: 32%;*/ /* Igual al ancho de la columna izquierda */
+    /* background: black;
+} */
+
+#navbar {
+    clear: left;
+}
 
 ul {
     color: white;
     background: black;
-
 }
 
 li {

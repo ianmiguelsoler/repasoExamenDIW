@@ -7,8 +7,11 @@ div {
 
 #box1 {
     background: #F00;
+    float: left;
 }
 
 #box2 {
     background: #0F0;
+    float: left;
+    margin-left: 20px; /*Se superpone una a ala otra debido a que los espacios ya estan puestos y se come el del otro y se posiciona uno a la izquierda del otro*/
 }

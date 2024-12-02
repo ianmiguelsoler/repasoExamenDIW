@@ -1,3 +1,10 @@
 #first { 
-    float:left;
+    float:right;
 }
+#second{
+    float: left;
+}
+/*
+* Si la segunda imagen estuviera flotando a la derecha también el texto se redimensiona y se ajusta al ancho que hay dejando las imagenes pegadas a la derecha
+* Por otra parte si se pone la primera imagen a la derecha y la segunda a la izquierda se posicionan y el texto se redimensiona
+*/
