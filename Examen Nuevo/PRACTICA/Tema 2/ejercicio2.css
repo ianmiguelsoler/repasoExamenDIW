@@ -1,9 +1,14 @@
 #box {
-    border: 5px dotted red;
+    border: 5px dotted red; /*Al cambiarlo a 0 desaparece porque no tiene tamaño y disminuye el ancho global ya que no estan los puntos con 5 px*/
     margin: 10px;
     padding: 10px;
     background: gray;
 }
+/*Justo al poner a 0 el padding se aleja del borde por la propiedad de las cajas de dentro a fuera
+priemro ancho y alto del contenido
+despues padding
+despues borde
+despues margin*/
 
 body {
     margin: 2px;

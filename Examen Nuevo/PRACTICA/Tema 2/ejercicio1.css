@@ -1,0 +1,31 @@
+h1{
+    color: aqua;
+}
+h2{
+    color: deeppink;
+}
+
+#tagline, .date{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: dodgerblue;
+}
+
+#nav li{
+    display: inline;
+}
+a{
+    transition: all 0.3s ease;
+    color: burlywood;
+    text-decoration: none;
+    padding: 5px;
+}
+#nav a:hover {
+    color: #fff; /* Cambiar el color del texto */
+    background-color: #007BFF; /* Fondo azul */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.post{
+    border: 2px dashed #CCCCCC;
+}
