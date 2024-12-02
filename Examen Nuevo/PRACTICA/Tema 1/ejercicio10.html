@@ -4,9 +4,36 @@
 		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		<title>Studio albums</title>
 	</head>
+	<style>
+		p:first-of-type{
+			color: red;
+		}
+		p:last-of-type{
+			color: blue;
+		}
+		p:nth-child(2){
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+		p:nth-child(3){
+			color: #CC0000;
+		}
+		p:nth-child(4){
+			background-color: #00FF00;
+		}
+		p:nth-child(5){
+			font-size: 22px;
+		}
+		p:nth-of-type(6){
+			background-color: aqua;
+		}
+		p:nth-of-type(n+10){
+			/* Este selecciona todos a partir de un parrago en especifico */
+			font-family: 'Courier New', Courier, monospace;
+		}
+	</style>
 	<body>
 		<div>
-    			<p>In the Court of the Crimson King (1969)</p>
+    		<p>In the Court of the Crimson King (1969)</p>
 			<p>In the Wake of Poseidon (1970)</p>
 			<p>Lizard (1970)</p>
 			<p>Islands (1971)</p>
