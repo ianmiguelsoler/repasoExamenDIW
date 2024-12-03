@@ -5,7 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        table {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9em;
+            margin: auto;
+            border-spacing: 0px;
+        }
+        th{
+            font-weight: bold;
+            background-color: #d4d4d4;
+            
+        }
+        tr{
+            border: 1px solid #333333;
+        }
+        th, td {
+            padding: 2px;
+            border: 1px solid #000000;
 
+        }
+        tr td:first-child{
+            background-color: #E6F3FF;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-align: left;
+        }
+        tr:nth-of-type(odd){
+            background-color: #FFFFCC;
+        }
+        #euro::before{
+            content: url("euro.png");
+        }
+        #dolar::before{
+            content: url("dolar.png");
+        }
+        #libra::before{
+            content: url("libra.png");
+        }
+        #yen::before{
+            content: url("yen.png");
+        }
     </style>
 </head>
 <body>
@@ -21,28 +61,28 @@
         </thead>
         <tbody>
             <tr>
-                <td>Euro / Dolar</td>
+                <td id="euro">Euro / Dolar</td>
                 <td>1.2524</td>
                 <td>1.2527</td>
                 <td>1.2539</td>
                 <td>1.2488</td>
             </tr>
             <tr>
-                <td>Dolar / Yen</td>
+                <td id="dolar">Dolar / Yen</td>
                 <td>119.01</td>
                 <td>119.05</td>
                 <td>119.82</td>
                 <td>119.82</td>
             </tr>
             <tr>
-                <td>Libra / Dolar</td>
+                <td id="libra">Libra / Dolar</td>
                 <td>1.8606</td>
                 <td>1.8611</td>
                 <td>1.8651</td>
                 <td>1.8522</td>
             </tr>
             <tr>
-                <td>Yen / Euro</td>
+                <td id="yen">Yen / Euro</td>
                 <td>0.6711</td>
                 <td>0.6705</td>
                 <td>0.6676</td>
